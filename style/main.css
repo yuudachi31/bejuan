@@ -1,0 +1,120 @@
+
+body{
+    background-color: #000;
+  
+}
+#container{
+height: 90vh;
+width: 160vh;
+
+overflow: hidden;
+
+margin: 5vh auto;
+
+}
+
+.posa{
+    position: absolute;
+    
+}
+.bg{
+    position: fixed;
+height:90vh;
+z-index: -1;
+}
+.screen_pos{
+    position: relative;
+    top:28vh;
+    left:30vh;
+    }
+.screen{
+top: 50%;
+left:50%;
+transform:translate(-50%,-50%);
+    height: 56.5vh;
+}
+.screen_light{
+    height: 61vh;
+    top: 50%;
+left:50%;
+transform:translate(-50%,-50%);
+
+}
+.elvis_pos{
+    position: relative;
+    top:44vh;
+    left:-30vh;
+}
+.elvis{
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    height: 61.5vh;
+}
+.elvis_light{
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    height: 65.5vh;
+}
+.ivy_pos{
+    position: relative;
+    top:56vh;
+    left:-1vh;
+}
+.ivy{
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    height: 66.5vh;
+}
+.ivy_light{
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    height: 70.5vh;
+}
+.left_table{
+    position: relative;
+    top:53vh;
+    left:-4vh;
+    height: 25vh;
+}
+.elvis_name{
+    position: relative;
+    top:30.5vh;
+    left:-80vh;
+    height: 9vh;
+}
+.nb{
+    position: relative;
+    height: 11vh;
+    top:-3vh;
+    left:-120vh;
+   
+}
+.right_table{
+    position: relative;
+    top:33vh;
+    left:60vh;
+    height: 33vh;
+}
+.ivy_name{
+    position: relative;
+    top:3vh;
+    left:-80vh;
+    height: 9vh;
+}
+.bottle_1{
+    position: relative;
+    top:-6vh;
+    left:80vh;
+    height: 8vh;
+}
+.bottle_2{
+    position: relative;
+    top:-6.5vh;
+    left:83vh;
+    height: 8vh;
+}
+.david_name{}
