@@ -1,0 +1,210 @@
+body{
+    background-color: #000;
+    height: 5000px;
+  width: 100vw;
+  overflow: hidden;
+}
+/* 博士對話框 */
+#welcome{
+    position: fixed;
+    /* background-image: url("../img/covid19/first_bg.png") ; */
+    z-index: 10;
+    visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+    
+}
+.first_bg{
+    position: absolute;
+    background: -webkit-linear-gradient(#00060A,#001C2B);
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.7;
+}
+.first_boxall{
+    width: 46vw;
+    height:10.7vw;
+    position: relative;
+    top:50%;
+    left:50%;
+    z-index: 2;
+    transform:translate(-50%,-50%);
+}
+.first_box{
+    width: 100%;
+    position: absolute;
+  
+}
+
+.dr_talk{
+   height: 65%;
+    position: absolute;
+    right: 10%;
+    bottom: 0px;
+    z-index: 10;
+}
+@media (min-width: 1200px) {
+    .dr_talk{
+        height: 70%;
+         position: absolute;
+         right: 10%;
+         bottom: 0px;
+         z-index: 10;
+     } 
+}
+.first_button{
+    width: 15%;
+    position: absolute;
+bottom: -7%;
+left: 50%;
+transform:translate(-50%,0%);
+ 
+}
+.shade{
+    opacity: 0.5;
+}
+
+/* 開投影機 */
+.lib_cont{
+height: 100vh;
+position: fixed;
+z-index:9 ;
+width: 100vw;
+}
+/* .lib_trigger的height可以控制scroll速率，
+.lib_moveY的height跟lib的位移距離有關 */
+.machine{
+    width: 20vw;
+    height: 30vw;
+    /* background-color: #fff; */
+    left: 50vw;
+    position: absolute;
+    bottom: 10vw;
+    transform:translate(-50%,0%);
+}
+.twocircle{
+    left: 50%;
+    transform:translate(-50%,0%);
+    position: absolute;
+    bottom:0.15vw;
+    width: 98%;
+}
+.light_1{
+    left: 50%;
+    transform:translate(-50%,0%);
+    position: absolute;
+    bottom:3.8vw;
+    width: 80%;
+
+}
+.light_2{
+    left: 50%;
+    transform:translate(-50%,0%);
+    position: absolute;
+    bottom:2vw;
+    width: 57%;
+}
+.light_3{
+    left: 50%;
+    transform:translate(-50%,0%);
+    position: absolute;
+    bottom:0px;
+    width: 103%;
+}
+.big_virus{
+ left: 50%;
+ transform:translate(-50%,0%);
+   position: absolute;
+   /* w/h=1.158 */
+   width: 18.5vw;
+   height: 16vw;
+}
+
+
+.lib_trigger{
+    height: 1200px;
+    width: 500px;
+    background-color: yellow;
+}
+.lib{
+    
+    position: absolute;
+    bottom:0% ;
+    width: 100vw;
+}
+.lib_moveY{
+    
+    height: 1000px;
+    width: 1px;
+    }
+    
+@media (min-width: 1080px) {
+    .lib{
+        position: absolute;
+        bottom:-9% ;
+        width: 100vw;
+       
+    }
+    .lib_trigger{
+        height: 1000px;
+        width: 500px;
+        background-color: red;
+    }
+    .lib_moveY{
+    position: absolute;
+    height: 1450px;
+    }
+}
+@media (min-width: 1420px) {
+    .lib{
+        position: absolute;
+        bottom:-16% ;
+        width: 100vw;
+       
+    }
+    .lib_trigger{
+        height: 1000px;
+        width: 500px;
+        background-color: red;
+    }
+    .lib_moveY{
+    position: absolute;
+    height: 1450px;
+    }
+    .machine{
+        width: 20vw;
+        height: 30vw;
+     
+        left: 50vw;
+        position: absolute;
+        bottom: 10vw;
+        transform:translate(-50%,0%);
+        display: flex;
+    }
+}
+
+@media (max-width: 880px) {
+    .lib{
+        position: absolute;
+       transform:scale(1.2);
+       
+    }
+}
+.sq1{
+    height: 100vh;
+    width: 100vw;
+    background-color: green;
+    z-index:0 ;
+}
+
+/* 病毒介紹 */
+.introduction_cont{
+/* background: -webkit-linear-gradient(#11194f,#040829); */
+background:-webkit-linear-gradient(#00060A,#001C2B);
+position: fixed;
+height:100vh;
+width: 100vw;
+z-index: 7;
+bottom: 0;
+left:  0;
+}

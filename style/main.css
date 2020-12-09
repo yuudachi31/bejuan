@@ -1,0 +1,160 @@
+
+body{
+    background-color: #000;
+    height: 100vh;
+  display: flex;
+  
+}
+img{
+    user-select: none;
+    /* 關閉選取功能 */
+}
+div{
+    -webkit-user-select: none;
+     /* 關閉選取功能 */
+}
+a{
+    -webkit-user-select: none;
+}
+#container{
+height: 45vw;
+width: 80vw;
+max-height: 100vh;
+overflow: hidden;
+
+margin:auto auto;
+max-width: 177.777vh;
+}
+
+.posa{
+    position: absolute;
+    
+}
+.bg{
+    position: fixed;
+width: 80vw;
+z-index: -1;
+max-height: 100vh;
+max-width: 177.777vh;
+}
+.screen_pos{
+    position: relative;
+    top:30%;
+    left:20%
+    }
+.screen{
+top: 50%;
+left:50%;
+transform:translate(-50%,-50%);
+    width: 41%;
+}
+.screen_light{
+    width: 44%;
+    top: 50%;
+left:50%;
+transform:translate(-50%,-50%);
+
+}
+.elvis_pos{
+    position: relative;
+    top:50%;
+    left:-20%;
+}
+.elvis{
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 18%;
+}
+.elvis_light{
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 20.43%;
+}
+.ivy_pos{
+    position: relative;
+    top:61%;
+    left:1%;
+}
+.ivy{
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 18%;
+}
+.ivy_light{
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 20.5%;
+}
+.left_table{
+    position: relative;
+    top:60%;
+    left:-3%;
+    width: 73%;;
+}
+.elvis_name{
+    position: relative;
+    top:34%;
+    left:-53%;
+    width: 6%;
+}
+.nb{
+    position: relative;
+    
+    top:-2.5%;
+    left:-73%;
+    width:9.5%;
+   
+}
+.right_table{
+    position: relative;
+    top:36%;
+    left:37%;
+   width: 78%;
+}
+.ivy_name{
+    position: relative;
+    top:-3%;
+    left:-48%;
+    width: 6%;
+}
+.bottle_1{
+    position: relative;
+    top:-9%;
+    left:45%;
+    width: 6%;
+}
+.bottle_2{
+    position: relative;
+    top:-9%;
+    left:50%;
+    width: 10%;
+}
+.david_name{
+    position: relative;
+    top:-9%;
+    left:53%;
+    width: 7%;
+}
+.david_pos{
+    position: relative;
+    top: -28%;
+    left:88%;
+    transform:translate(-50%,-50%);
+   
+}
+.david{
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 17%;
+}
+.david_light{
+    top: 50%;
+    left:50%;
+    transform:translate(-49.8%,-50%);
+    width: 21.45%;
+}

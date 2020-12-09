@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/normalize.css" >
+    <link rel="stylesheet" href="style/covid19.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- bootstrap要加在jquery後 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"> </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" integrity="sha512-HzAEuXwhLxwm/Jj+5ecdjzrRVrjuh2ZeIxyT1Ln37TO5pWNMnKBuU7cfd1wvRQ/k86w1oC174Yk1T7aRlBpIcA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js" integrity="sha512-Ey+nIg+Ue8gUAaCNjR1KHR8nwDjWn9QXoQbynR/X+V66s6u1oqynnuRQ8zSgg5f5gBNb2Bzsu1pItCi3sPkbfA==" crossorigin="anonymous"></script>
+     -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    
+    <!-- 加上這行才能用settween()https://greensock.com/forums/topic/20673-settween-is-not-a-function/ -->
+    <!-- animation.gsap.min.js要在scrollmagic.min.js後面 https://github.com/janpaepke/ScrollMagic/issues/651 -->
+    
+</head>
+<body>
+  
+    <!-- 博士對話框 -->
+  <div id="welcome"> <!-- z-index:10 -->
+    <div class="first_bg" ></div>
+    <img class="dr_talk"src="img/covid19/dr_talk.svg">
+  <div class="first_boxall">
+       <img  class="first_box"src="img/covid19/first_box.svg">
+       <img class="first_button"src="img/covid19/first_button.svg">
+       <img class="first_button shade"src="img/covid19/first_btn_shade.png">
+</div>
+  </div>
+ 
+  <!-- 開投影機 -->
+<div class="lib_cont"><!-- z-index:9 -->
+  
+  <div  class="lib" id="lib_c">
+    <div class="machine">
+     
+      <img  class="twocircle" src="img/covid19/twocircle.svg">
+      <img  class="light_1" src="img/covid19/light_1.svg">
+      <img  class="big_virus" src="img/covid19/big_virus@2x.png">
+      <img  class="light_2" src="img/covid19/light_2.svg">
+      <img  class="light_3" src="img/covid19/light_3.svg">
+      
+    </div>
+  <img  src="img/covid19/lib.svg">
+  </div>
+</div>
+
+ 
+<div class="sq1"></div> <!-- z-index:0 -->
+
+<div class="lib_trigger"></div>
+
+<div class="lib_moveY"id="lib_moveY"></div>
+ <!-- 病毒介紹 -->
+ <div class="introduction_cont"></div><!-- z-index:7 -->
+
+
+      <script src="js/covid19.js"></script>
+</body>
+</html>
