@@ -31,7 +31,8 @@ $(document).ready(function() {
    //   document.documentElement.style.overflowX = 'hidden'; 
    let v_ani=gsap.timeline() 
    
-   
+ 
+
    v_ani.to(".light_3",{opacity:1,duration:0},"<")
    v_ani.to(".light_1",{opacity:1,duration:0},"<")
    v_ani.to(".big_virus",{opacity:1,duration:0},"<")
@@ -77,7 +78,8 @@ $(document).ready(function() {
         start:"top bottom",
        //pin:true,
         scrub:true,
-    //markers:true
+    //markers:true,
+    id:"abc"
       } 
      
       // scrollTrigger: {
@@ -96,12 +98,13 @@ $(document).ready(function() {
     });
     
     
-    virus_scroll.to(".big_virus",{y:　-30,scale:1.2,ease:"none"})
+    virus_scroll.to(".big_virus",{y:　-15,scale:1.2,ease:"none"})
     //下面那行不加的話，big_virus一開始會從-300出現
     virus_scroll.from(".big_virus",{x:0});
-    virus_scroll.to(".big_virus",{x:　-300,rotateZ:"10deg",ease:"none"},)
+    virus_scroll.to(".big_virus",{x:　"-23vw",rotateZ:"10deg",ease:"none"},)
 
   
+    // gsap.to(".market_bg",{opacity:0})
 
     });
 
@@ -109,6 +112,7 @@ $(document).ready(function() {
     $(window).on('load', function() {
         $("body").addClass('loaded');
          let lib_h=document.getElementById("lib_moveY").offsetHeight;
+         let map_h=document.getElementById("maplottie_moveY").offsetHeight;
       //  let lib_h;
       //  $("#lib_c").load(function(){
       //   lib_h=this.height
@@ -132,6 +136,18 @@ $(document).ready(function() {
       
         });
 
+        let world_scroll1 = gsap.timeline({
+          scrollTrigger:{
+            trigger:".world_trigger1",
+            start:"top center",
+            end:"bottom top",
+           //pin:true,
+            scrub:true,
+      //  markers:true,
+        
+          } 
+        });
+        world_scroll1.to(".maplottie",{y:-map_h});
     });
 
 function getScrollTop(){
@@ -309,7 +325,7 @@ function applyBlur()
   },
     } 
   });
-  virus_boom.to(".big_virus",{scale:4,opacity:0,duration:0.5});
+  virus_boom.to(".big_virus",{scale:4,opacity:0,duration:1});
  virus_boom.to(blurElement,0.5,{ onUpdate: self => {
   applyBlur()
 },a:20},"<")
@@ -322,18 +338,18 @@ let map_lottie_data = {
   loop: false,
   prerender: true,
   autoplay: false,
-  path: 'json/map.json'
+  path: 'json/map3.json'
   //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
 };
 let map_Anim = bodymovin.loadAnimation(map_lottie_data);
 let timeObj = {currentFrame: 0}
 //  let endString = (obj.speed === "slow") ? "+=2000" : (obj.speed === "medium") ? "+=1000" : (obj.speed === undefined) ? "+=1250" : "+=500";
  ScrollTrigger.create({
-   trigger:".virus_trigger5",
+   trigger:".world_trigger2",
      scrub: true,
     start:"-120 center",
-     end:"1500 ",
-    
+     
+    // markers:true,
     //  end: endString, 
      onUpdate: self => {
      // console.log($(window).height()+"QQ")
@@ -353,15 +369,200 @@ let timeObj = {currentFrame: 0}
      }
  });  
  
- let world_scroll1 = gsap.timeline({
+//  let world_scroll1 = gsap.timeline({
+//   scrollTrigger:{
+//     trigger:".world_trigger1",
+//     start:"top center",
+//     end:"bottom top",
+//    //pin:true,
+//     scrub:true,
+// markers:true,
+
+//   } 
+// });
+// world_scroll1.to(".maplottie",{y:-$(window).height()});
+gsap.to(".market_bg",{
   scrollTrigger:{
-    trigger:".world_trigger1",
+trigger:".market_trigger1",
+scrub:true,
+start:"top center",
+end:"bottom center",
+  },
+  opacity:1,scale:1})
+
+  gsap.to(".bat_cont",{
+    scrollTrigger:{
+  trigger:".bat_trigger1",
+  scrub:true,
+  start:"top center",
+  end:"bottom center",
+  // markers:true,
+  // id:"bat_trigger1",
+    },
+    y:-3.3*$(window).height(),
+    ease:"none"
+  })
+  gsap.to(".white_shade",{
+    scrollTrigger:{
+  trigger:".market_trigger2",
+  scrub:true,
+  start:"top center",
+  end:"bottom center",
+  // markers:true,
+  // id:"bat_trigger1",
+    },
+    opacity:0.8,
+    ease:"none"
+  })
+  let wing_flap = anime({
+    targets: '.bat_wing',
+    width:[{value:'60%',duration:100},{value:'100%',duration:100}],
+    direction: 'alternate',
+    loop: true,
+    easing: 'linear',
+  autoplay:false,
+   
+  //  complete: function() {
+  //    if(flashBool===true){
+  //     virusFlash.play();
+  //    }
+  //  }
+  }); 
+  let bat_move = gsap.timeline({
+    // yes, we can add it to an entire timeline!
+    scrollTrigger:{
+      trigger:".bat_trigger2",
+      start:"top center",
+      end:"bottom center",
+     //pin:true,
+    onEnter:()=>{wing_flap.play()},
+   onLeave:()=>{wing_flap.pause();wing_flap.seek(200);},
+   onEnterBack:()=>{wing_flap.play()},
+   onLeaveBack:()=>{wing_flap.pause();wing_flap.seek(200);},
+      scrub:true,
+ 
+    } 
+   
+  });
+  bat_move.from(".bat",{x:"20vw",ease:"none"})
+ 
+  let bat_texts = gsap.timeline({
+  
+    scrollTrigger:{
+      trigger:".bat_trigger3",
+      start:"top center",
+      end:"bottom center",
+     //pin:true,
+     // scrub:true,
+  //markers:true,
+  onLeave:()=>{
+  
+  },
+  toggleActions:"restart none none reverse "
+    } 
+  });
+  bat_texts.from(".bat_name",{opacity:0,duration:0.3});
+  bat_texts.from(".bat_text",{opacity:0,duration:0.3})
+
+  let wall_move = gsap.timeline({
+  
+    scrollTrigger:{
+      trigger:".bat_trigger4",
+      start:"top center",
+      end:"bottom center",
+     //pin:true,
+      //scrub:true,
+  //markers:true,
+  onLeave:()=>{
+  
+  },
+  toggleActions:"restart none none reverse "
+    } 
+  });
+  wall_move.from(".wall_left",{x:"-59.5vw",duration:0.8});
+  wall_move.from(".wall_right",{x:"59.5vw",duration:0.8},"<");
+  wall_move.to(".world_cont",{y:"-150vh",duration:0.6})
+
+  
+let animals_anime_cont = document.querySelector('#animals_anime');
+let animals_anime_data = {
+  container: animals_anime_cont,
+  animType: 'svg',
+  loop: false,
+  prerender: true,
+  autoplay: false,
+  path: 'json/animals.json'
+  //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
+};
+let animals_anime_Anim = bodymovin.loadAnimation(animals_anime_data);
+let animals_anime_TimeObj = {currentFrame: 0}
+//  let endString = (obj.speed === "slow") ? "+=2000" : (obj.speed === "medium") ? "+=1000" : (obj.speed === undefined) ? "+=1250" : "+=500";
+ ScrollTrigger.create({
+   trigger:".animals_trigger2",
+     scrub: true,
     start:"top center",
-    end:"bottom top",
+    
+  //  markers:true,
+    //  end: endString, 
+     onUpdate: self => {
+     // console.log($(window).height()+"QQ")
+      //  console.log(self.progress) 
+      //self.progress可以看到scroll動畫的進度0~1
+      // if(obj.duration) {
+        getScrollTop()
+       gsap.to(animals_anime_TimeObj,0, {
+        
+        currentFrame:(Math.floor(self.progress *  (animals_anime_Anim.totalFrames - 1))),
+        onUpdate: () => {
+          animals_anime_Anim.goToAndStop(animals_anime_TimeObj.currentFrame, true)
+        },
+        ease: 'expo'
+       })
+    
+     }
+ });
+ let animal_moveY = gsap.timeline({
+  
+  scrollTrigger:{
+    trigger:".animals_trigger2",
+    start:"top center",
+    
    //pin:true,
     scrub:true,
-markers:true,
+//markers:true,
 
   } 
 });
-world_scroll1.to(".maplottie",{y:-$(window).height()});
+animal_moveY.to(".animals_anime",{y:"-50px"});
+// animal_moveY.to(".virus_small",500,{x:"-250px"});
+
+let path1 = anime.path(".virus_small_svg .path1")
+let path3 = anime.path(".virus_small_svg .path3")
+ anime({
+   targets:'.v1',
+   translateX:path1('x'),
+   translateY:path1('y'),
+  //  easing:'easeInOutQuad',
+  easing:'linear',
+   duration:3000,
+   loop:true
+ });
+ anime({
+   targets:'.v2',
+   translateX:path3('x'),
+   translateY:path3('y'),
+  //  easing:'easeInOutQuad',
+  easing:'linear',
+   duration:2000,
+   loop:true
+ });
+//  let path2 = anime.path(".virus_small_svg .path2")
+//  anime({
+//    targets:'.virus_small',
+//    translateX:path2('x'),
+//    translateY:path2('y'),
+//    easing:'linear',
+//    duration:5000,
+//    loop:true
+//  });
+ 

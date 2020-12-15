@@ -140,11 +140,11 @@ width: 100vw;
     width: 300px;
     background-color: yellow;
 }
-.know_trigger{
+/* .know_trigger{
     height: 2000px;
     width: 300px;
     background-color: rgb(0, 255, 242);
-}
+} */
 .lib{
     
     position: absolute;
@@ -321,26 +321,332 @@ top:300px;
 }
 .world_cont{
       
-      /* background:-webkit-linear-gradient(#00060A,#001C2B); */
+        background:-webkit-linear-gradient(#00060A,#001C2B);  
 position: fixed;
 height:100vh;
 width: 100vw;
 z-index: 6;
 bottom: 0;
 left:  0;
+overflow: hidden;
 }
 .maplottie{
     position: absolute;
-    left: 50vw;
+   
     /* top:0; */
     top:100vh;
-    width: 100%;
-    transform:translate(-50%,0%);
+  left:-10vw;
+ width: 120vw;
+    z-index: 8;
+  
 }
+.maplottie_moveY{
+    height: 110vh;
+}
+@media (min-width: 1500px) {
+    .maplottie{
+        top:85vh;
+        width: 100vw;
+        left: 0;
+    }
+    .maplottie_moveY{
+        height: 100vh;
+        position: absolute;
+        background-color: #000;
+    }
+
+}
+
 .world_trigger2{
-    top:1000px;
-    height: 1500px;
+    top:840px;
+    height: 4000px;
     background-color: rgb(236, 25, 78);
     width: 200px;
     position: relative;
+}
+.market_cont{
+    position: absolute;
+   
+     top:0; 
+     
+    height: 100vh;
+    width: 100vw;
+ 
+    overflow: hidden;
+}
+.white_shade{
+    position: fixed;
+    width: 100vw;   
+    height: 100vh;
+    top:0;
+    background-color: #d4d4d4;
+    opacity: 0;
+    
+}
+.market_bg{
+    z-index: 5;
+    
+     top:0; 
+    /* top:200vh; */
+    width: 100vw;
+  opacity: 0;
+    transform: scale(1.1);
+}
+.market_trigger1{
+    top:5000px;
+        height:200px;
+        background-color: rgb(187, 25, 236);
+        width: 200px;
+        position: relative;
+    }
+.market_trigger2{
+    top:5800px;
+        height:200px;
+        background-color: rgb(187, 25, 236);
+        width: 200px;
+        position: relative;
+        
+    }    
+.bat_cont{
+position: fixed;
+width: 100vw;
+
+top:100vh;
+left:0;
+z-index: 8;
+/* background-color: #fff; */
+
+}
+.market_text1{
+    width: 50vw;
+    margin-left: 50vw;
+    margin-top: 35vh;
+    transform:translate(-50%,0%);
+    
+}
+.market_text2{
+    width: 60vw;
+    margin-left: 50vw;
+    margin-top: 100vh;
+    transform:translate(-50%,0%);
+    
+}
+/* 蝙蝠          */
+.bat_tri_cont{
+    width: 600;
+    height: 555vh;
+    display: flex;
+    flex-direction:row;
+    background-color: rgb(73, 146, 168);
+margin-top: 1500px;
+}
+.bat_trigger1{
+    top:0px;
+    height:400vh;
+    background-color: rgb(160, 67, 189);
+    width: 200px;
+    position: relative;
+}
+.bat_trigger2{
+    top:370vh;
+    height:80vh;
+    background-color: rgb(160, 67, 189);
+    width: 100px;
+    position: relative;
+}
+.bat_trigger3{
+    top:470vh;
+    height:20vh;
+    background-color: rgb(160, 67, 189);
+    width: 100px;
+    position: relative;
+}
+.bat_trigger4{
+    top:550vh;
+    /* height:120vh; */
+    height: 5vh;
+    background-color: rgb(160, 67, 189);
+    width: 100px;
+    position: relative;
+}
+.bat_con{
+    margin-left: 10vw;
+    margin-top: 60vh;
+    display:flex;
+  width: 80vw;
+  height: 60vw;
+ 
+  position: relative;
+}
+.bat{
+    position: absolute;
+top:13vh;
+
+    width: 34vw;
+    height: 25vw;
+    
+    
+}
+.bat_wing{
+position: absolute;
+height: 65%;
+width: 100%;
+margin-left: 50%;
+transform:translate(-50%,0%);
+}
+.bat_body{
+
+    width: 22%;
+    position: absolute;
+    margin-left: 50%;
+    transform:translate(-50%,-6%);
+}
+.bat_name{
+    width: 40%;
+    position: absolute;
+    margin-left: 50%;
+    transform:translate(-50%,0%);
+    bottom:0;
+ 
+}
+.bat_text{
+    position: absolute;
+    width: 40vw;
+  right: 0vw;
+   
+    
+}
+.wall_left{
+position: fixed;
+height: 100vh;
+top:0;
+left: 0;
+width: 59.5vw;
+z-index: 11;
+}
+.wall_right{
+    position: fixed;
+    height: 100vh;
+    top:0;
+    right:0;
+    width: 59.5vw;
+    z-index: 11;
+}
+.animals_cont{
+    position: fixed;
+    background: -webkit-linear-gradient(#00060A,#001C2B);
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    left:0;
+}
+.animals_tri_cont{
+    width: 600;
+    height: 1000px;
+    display: flex;
+    flex-direction:row;
+    background-color: rgb(125, 73, 168);
+
+}
+.animals_trigger1{
+    top:200px;
+    /* height:120vh; */
+    height: 500px;
+    background-color: rgb(67, 120, 189);
+    width: 100px;
+    position: relative;
+}
+.animals_trigger2{
+    top:800px;
+    /* height:120vh; */
+    height: 2000px;
+    background-color: rgb(67, 120, 189);
+    width: 100px;
+    position: relative;
+}
+.animals_anime{
+position: absolute;
+    top:0px;
+    /* top:100vh; */
+left: 0;
+ width: 100vw;
+    z-index: 8;
+}
+@media (min-width: 1500px) {
+    .animals_anime{
+        position: absolute;
+            top:-120px;
+            /* top:100vh; */
+        left: 0;
+         width: 100vw;
+            z-index: 8;
+        }
+}
+.virus_small{
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform:translate(-50%,-50%);
+}
+.virus_small_svg{
+width: 60px;
+height: 60px;
+/* background-color: #fff; */
+}
+.each_virus{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+}
+.v1{
+  top:0;
+  left:0;
+}
+.v2{
+  top :10px;
+  left:10px  
+}
+.v2{
+    top :10px;
+    left:10px  
+  }
+  .v3{
+    top :48px;
+    left:10px  
+  }
+  .v4{
+    top :10px;
+    left:50px  
+  }
+  .v5{
+    top :32px;
+    left:55px  
+  }
+  .v6{
+    top :19px;
+    left:40px  
+  }
+  .v7{
+    top :58px;
+    left:48px  
+  }
+  .v8{
+    top :30px;
+    left:50px  
+  }
+  .v9{
+    top :5px;
+    left:33px  
+  }
+
+
+.virus_shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
 }
