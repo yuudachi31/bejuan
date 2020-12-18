@@ -19,7 +19,7 @@ v_ani.to(".big_virus",{opacity:1,duration:0},"<")
 }
 
 $(document).ready(function() {
-  
+  $(".man_fever").hide();
   async function Loadtop(){
     let loadTop= await getScrollTop();
     if(loadTop<1){
@@ -105,7 +105,7 @@ $(document).ready(function() {
 
   
     // gsap.to(".market_bg",{opacity:0})
-
+   
     });
 
 
@@ -445,7 +445,7 @@ end:"bottom center",
    
   });
   bat_move.from(".bat",{x:"20vw",ease:"none"})
- 
+  bat_move.to(".animals_cont0",{opacity:1},"<");
   let bat_texts = gsap.timeline({
   
     scrollTrigger:{
@@ -533,11 +533,17 @@ let animals_anime_TimeObj = {currentFrame: 0}
 
   } 
 });
-animal_moveY.to(".animals_anime",{y:"-50px"});
+animal_moveY.to(".beehome",{opacity:1})
+animal_moveY.to(".animals_anime",{y:"90px"});
 // animal_moveY.to(".virus_small",500,{x:"-250px"});
 
 let path1 = anime.path(".virus_small_svg .path1")
 let path3 = anime.path(".virus_small_svg .path3")
+let path4 = anime.path(".virus_small_svg .path4")
+let path5 = anime.path(".virus_small_svg .path5")
+let path6 = anime.path(".virus_small_svg .path6")
+let path7 = anime.path(".virus_small_svg .path7")
+
  anime({
    targets:'.v1',
    translateX:path1('x'),
@@ -548,7 +554,7 @@ let path3 = anime.path(".virus_small_svg .path3")
    loop:true
  });
  anime({
-   targets:'.v2',
+   targets:'.v3',
    translateX:path3('x'),
    translateY:path3('y'),
   //  easing:'easeInOutQuad',
@@ -556,6 +562,69 @@ let path3 = anime.path(".virus_small_svg .path3")
    duration:2000,
    loop:true
  });
+ anime({
+  targets:'.v4',
+  translateX:path4('x'),
+  translateY:path4('y'),
+ //  easing:'easeInOutQuad',
+ easing:'linear',
+  duration:2600,
+  loop:true
+});
+anime({
+  targets:'.v5',
+  translateX:path5('x'),
+  translateY:path5('y'),
+ //  easing:'easeInOutQuad',
+ easing:'linear',
+  duration:1800,
+  loop:true
+});
+anime({
+  targets:'.v6',
+  translateX:path6('x'),
+  translateY:path6('y'),
+ //  easing:'easeInOutQuad',
+ easing:'linear',
+  duration:2600,
+  loop:true
+});
+anime({
+  targets:'.v7',
+  translateX:path7('x'),
+  translateY:path7('y'),
+ //  easing:'easeInOutQuad',
+ easing:'linear',
+  duration:1800,
+  loop:true
+});
+anime({
+  targets:'.v8',
+  translateX:path3('x'),
+  translateY:path3('y'),
+ //  easing:'easeInOutQuad',
+ easing:'linear',
+  duration:2900,
+  loop:true
+});
+anime({
+  targets:'.v9',
+  translateX:path7('x'),
+  translateY:path7('y'),
+ //  easing:'easeInOutQuad',
+ easing:'linear',
+  duration:2050,
+  loop:true
+});
+anime({
+  targets:'.v10',
+  translateX:path5('x'),
+  translateY:path5('y'),
+ //  easing:'easeInOutQuad',
+ easing:'linear',
+  duration:3200,
+  loop:true
+});
 //  let path2 = anime.path(".virus_small_svg .path2")
 //  anime({
 //    targets:'.virus_small',
@@ -565,4 +634,211 @@ let path3 = anime.path(".virus_small_svg .path3")
 //    duration:5000,
 //    loop:true
 //  });
+let smallvirus_move1 = gsap.timeline({
+  scrollTrigger:{
+    trigger:".animals_trigger3",
+    start:"top center",
+    end:"bottom top",
+   //pin:true,
+    scrub:true,
+//  markers:true,
+
+  } 
+});
+smallvirus_move1.to(".virus_small1",{x:"40vw",duration:8});
+smallvirus_move1.to(".virus_small1",{x:"30vw",y:"7vw",duration:4});
+smallvirus_move1.to(".virus_small1",{x:"28vw",y:"7vw",duration:2});
+// smallvirus_move1.to(".virus_small1",{x:"20vw",y:"-9vw",duration:5});
+// smallvirus_move1.to(".virus_small1",{x:"18vw",y:"-9vw",duration:2});
+// smallvirus_move1.to(".virus_small1",{x:"10vw",y:"5vw",duration:5});
+// smallvirus_move1.to(".virus_small1",{x:"8vw",y:"5vw",duration:2});
+smallvirus_move1.to(".virus_small1",{x:"10vw",y:"-7vw",duration:5});
+smallvirus_move1.to(".virus_small1",{x:"8vw",y:"-7vw",duration:2});
+smallvirus_move1.to(".virus_small1",{x:"-10vw",y:"5vw",duration:5});
+smallvirus_move1.to(".virus_small1",{x:"-12vw",y:"5vw",duration:2});
+smallvirus_move1.to(".virus_small1",{x:"-20vw",y:"-7vw",duration:5});
+smallvirus_move1.to(".virus_small1",{x:"-22vw",y:"-5vw",duration:2});
+smallvirus_move1.to(".virus_small1",{x:"-22vw",y:"0vw",duration:2});
+smallvirus_move1.to(".virus_small1",{x:"-17vw",y:"5vw",duration:2});
+smallvirus_move1.to(".virus_small1",{x:"-10vw",y:"8vw",duration:2});
+smallvirus_move1.to(".virus_small1",{x:"0vw",y:"10vw",duration:2});
+let smallvirus_move2 = gsap.timeline({
+  scrollTrigger:{
+    trigger:".animals_trigger3",
+    start:"top center",
+    end:"bottom top",
+   //pin:true,
+    scrub:0.5,
+//  markers:true,
+
+  } 
+});
+smallvirus_move2.to(".virus_small2",{x:"40vw",duration:12});
+smallvirus_move2.to(".virus_small2",{x:"30vw",y:"7vw",duration:4});
+smallvirus_move2.to(".virus_small2",{x:"28vw",y:"7vw",duration:2});
+// smallvirus_move2.to(".virus_small2",{x:"20vw",y:"-9vw",duration:5});
+// smallvirus_move2.to(".virus_small2",{x:"18vw",y:"-9vw",duration:2});
+// smallvirus_move2.to(".virus_small2",{x:"10vw",y:"5vw",duration:5});
+// smallvirus_move2.to(".virus_small2",{x:"8vw",y:"5vw",duration:2});
+smallvirus_move2.to(".virus_small2",{x:"10vw",y:"-7vw",duration:5});
+smallvirus_move2.to(".virus_small2",{x:"8vw",y:"-7vw",duration:2});
+smallvirus_move2.to(".virus_small2",{x:"-10vw",y:"5vw",duration:5});
+smallvirus_move2.to(".virus_small2",{x:"-12vw",y:"5vw",duration:2});
+smallvirus_move2.to(".virus_small2",{x:"-20vw",y:"-7vw",duration:5});
+smallvirus_move2.to(".virus_small2",{x:"-22vw",y:"-5vw",duration:2});
+smallvirus_move2.to(".virus_small2",{x:"-22vw",y:"0vw",duration:2});
+smallvirus_move2.to(".virus_small2",{x:"-17vw",y:"5vw",duration:2});
+smallvirus_move2.to(".virus_small2",{x:"-10vw",y:"8vw",duration:2});
+smallvirus_move2.to(".virus_small2",{x:"0vw",y:"10vw",duration:2});
+
+let smallvirus_move3 = gsap.timeline({
+  scrollTrigger:{
+    trigger:".animals_trigger3",
+    start:"top center",
+    end:"bottom top",
+   //pin:true,
+    scrub:1,
+//  markers:true,
+
+  } 
+});
+smallvirus_move3.to(".virus_small3",{x:"40vw",duration:8});
+smallvirus_move3.to(".virus_small3",{x:"30vw",y:"7vw",duration:4});
+smallvirus_move3.to(".virus_small3",{x:"28vw",y:"7vw",duration:2});
+// smallvirus_move3.to(".virus_small3",{x:"20vw",y:"-9vw",duration:5});
+// smallvirus_move3.to(".virus_small3",{x:"18vw",y:"-9vw",duration:2});
+// smallvirus_move3.to(".virus_small3",{x:"10vw",y:"5vw",duration:5});
+// smallvirus_move3.to(".virus_small3",{x:"8vw",y:"5vw",duration:2});
+smallvirus_move3.to(".virus_small3",{x:"10vw",y:"-7vw",duration:5});
+smallvirus_move3.to(".virus_small3",{x:"8vw",y:"-7vw",duration:2});
+smallvirus_move3.to(".virus_small3",{x:"-10vw",y:"5vw",duration:5});
+smallvirus_move3.to(".virus_small3",{x:"-12vw",y:"5vw",duration:2});
+smallvirus_move3.to(".virus_small3",{x:"-20vw",y:"-7vw",duration:5});
+smallvirus_move3.to(".virus_small3",{x:"-22vw",y:"-5vw",duration:2});
+smallvirus_move3.to(".virus_small3",{x:"-22vw",y:"0vw",duration:2});
+smallvirus_move3.to(".virus_small3",{x:"-17vw",y:"5vw",duration:2});
+smallvirus_move3.to(".virus_small3",{x:"-10vw",y:"8vw",duration:2});
+smallvirus_move3.to(".virus_small3",{x:"0vw",y:"10vw",duration:2});
+
+// ScrollTrigger.create({
+//   trigger: ".animals_trigger4",
+//   start: "top center",  
+//  // markers:true,
+//   onEnter:()=>{$('.animal_text1').show(500)},
+//   // onEnter:()=>{$('.animal_text1').css("opacity","1")},
+//   onLeave:()=>{},
+//   onEnterBack:()=>{},
+//   onLeaveBack:()=>{}
+//   });
+
+
+  let animal_text1 = gsap.timeline({
+    scrollTrigger:{
+      trigger:".animals_trigger4",
+      start:"top center",
+      end:"bottom center",
+      toggleActions:"restart reverse restart reverse",
+     //pin:true,
+     // scrub:true,
+//  markers:true,
+  
+    } 
+  });
+  animal_text1.to(".animal_text1",{opacity:1});
+
+  let animal_text2 = gsap.timeline({
+    scrollTrigger:{
+      trigger:".animals_trigger5",
+      start:"top center",
+      end:"bottom center",
+      toggleActions:"restart reverse restart reverse",
+     //pin:true,
+     // scrub:true,
+//  markers:true,
+  
+    } 
+  });
+  animal_text2.to(".animal_text2",{opacity:1});
+
+
+ 
+  let virus_change = gsap.timeline({
+    scrollTrigger:{
+      trigger:".animals_trigger2",
+      start:"top center",
+      end:"bottom top",
+     //pin:true,
+      scrub:true,
+   // markers:true,
+  
+    } 
+  });
+  virus_change.to(".each_virus",{backgroundColor:"#cc0caf"});
+  virus_change.to(".each_virus",{backgroundColor:"#dbb623"});
+  virus_change.to(".each_virus",{backgroundColor:"#51f0cb"});
+  virus_change.to(".each_virus",{backgroundColor:"#1ee33b"});
+  virus_change.to(".each_virus",{backgroundColor:"red",duration:2});
+
+  let animal_out = gsap.timeline({
+    scrollTrigger:{
+      trigger:".animals_trigger6",
+      start:"top center",
+     
+       toggleActions:"restart none none reverse",
+     //pin:true,
+      scrub:true,
+//  markers:true,
+  
+    } 
+  });
+  animal_out.to(".closeup",{y:"-170vh"});
+  animal_out.to(".animals_cont0",{opacity:0},"<");
+  // animal_out.to(".smallv",{x:"0vw",y:"0vw"});
+  let animal_out2 = gsap.timeline({
+    scrollTrigger:{
+      trigger:".symp_trigger1",
+      start:"top center",
+     end:"bottom center",
+       toggleActions:"restart none none reverse",
+     //pin:true,
+      scrub:true,
+      
+//  markers:true,
+onEnter:()=>{},
+onLeave:()=>{$('.smallv').fadeOut(300)},
+onEnterBack:()=>{$('.smallv').fadeIn(500)},
+onLeaveBack:()=>{}
+    } 
+  });
+  animal_out2.to(".sympt_all",{y:"-100vh",});
+  animal_out2.to(".smallv",{x:"0vw",y:"0vh"},"<");
+  
+
+
+  $(".symp_trigger1").hover(function(){
+    $('.man_fever').show();
+    $('.man_normal').hide();
+    console.log("aaaaaa")
+  },function(){
+   $('.man_normal').show()
+   $(".man_fever").hide();
+  })
+  
+  let symptom_y = gsap.timeline({
+    scrollTrigger:{
+      trigger:".symp_trigger2",
+      start:"top center",
+    //  end:"bottom center",
+      //  toggleActions:"restart none none reverse",
+     //pin:true,
+      scrub:true,
+      
+  markers:true,
+onEnter:()=>{},
+onLeave:()=>{},
+onEnterBack:()=>{},
+onLeaveBack:()=>{}
+    } 
+  });
+  symptom_y.to(".symptoms_virus_all",{y:"-600vh"});
  

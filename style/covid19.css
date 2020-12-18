@@ -1,6 +1,6 @@
 body{
     background-color: #000;
-    height: 20000px;
+    height: 40000px;
   width: 100vw;
   overflow: hidden;
 }
@@ -188,7 +188,7 @@ width: 100vw;
     }
     .lib_moveY{
     position: absolute;
-    height: 1450px;
+    height: 1600px;
     }
     .machine{
         width: 20vw;
@@ -345,7 +345,7 @@ overflow: hidden;
 }
 @media (min-width: 1500px) {
     .maplottie{
-        top:85vh;
+        top:100vh;
         width: 100vw;
         left: 0;
     }
@@ -364,6 +364,17 @@ overflow: hidden;
     width: 200px;
     position: relative;
 }
+@media (min-width: 1500px) {
+    .world_trigger2{
+        top:900px;
+        height: 4000px;
+        background-color: rgb(236, 25, 78);
+        width: 200px;
+        position: relative;
+    }
+
+}
+
 .market_cont{
     position: absolute;
    
@@ -513,7 +524,7 @@ transform:translate(-50%,0%);
     position: absolute;
     width: 40vw;
   right: 0vw;
-   
+   top:6vh
     
 }
 .wall_left{
@@ -532,17 +543,27 @@ z-index: 11;
     width: 59.5vw;
     z-index: 11;
 }
-.animals_cont{
+.animals_cont0{
     position: fixed;
-    background: -webkit-linear-gradient(#00060A,#001C2B);
+        background: -webkit-linear-gradient(#00060A,#001C2B);   
     height: 100vh;
     width: 100vw;
     top:0;
     left:0;
+    z-index: 5;
+}
+.animals_cont{
+    position: fixed;
+      /* background: -webkit-linear-gradient(#075991,#001C2B);    */
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    left:0;
+    z-index: 7;
 }
 .animals_tri_cont{
     width: 600;
-    height: 1000px;
+    height: 7500px;
     display: flex;
     flex-direction:row;
     background-color: rgb(125, 73, 168);
@@ -559,8 +580,40 @@ z-index: 11;
 .animals_trigger2{
     top:800px;
     /* height:120vh; */
-    height: 2000px;
+    height: 6000px;
     background-color: rgb(67, 120, 189);
+    width: 100px;
+    position: relative;
+}
+.animals_trigger3{
+    top:400px;
+    /* height:120vh; */
+    height: 6400px;
+    background-color: rgb(139, 159, 185);
+    width: 100px;
+    position: relative;
+}
+.animals_trigger4{
+    top:1350px;
+    /* height:120vh; */
+    height: 1600px;
+    background-color: rgb(45, 73, 110);
+    width: 100px;
+    position: relative;
+}
+.animals_trigger5{
+    top:3250px;
+    /* height:120vh; */
+    height: 1600px;
+    background-color: rgb(45, 73, 110);
+    width: 100px;
+    position: relative;
+}
+.animals_trigger6{
+    top:6900px;
+    /* height:120vh; */
+    height: 2000px;
+    background-color: rgb(45, 73, 110);
     width: 100px;
     position: relative;
 }
@@ -582,15 +635,31 @@ left: 0;
             z-index: 8;
         }
 }
-.virus_small{
+.virus_small1{
     position: absolute;
     left: 50vw;
     top: 50vh;
     transform:translate(-50%,-50%);
 }
+.virus_small2{
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform:translate(-50%,-50%);
+}
+.virus_small3{
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform:translate(-50%,-50%);
+}
+.smallv{
+
+}
 .virus_small_svg{
 width: 60px;
 height: 60px;
+z-index: 0;
 /* background-color: #fff; */
 }
 .each_virus{
@@ -599,15 +668,13 @@ height: 60px;
     border-radius: 50%;
     background-color: red;
     position: absolute;
+    z-index: 10;
 }
 .v1{
   top:0;
   left:0;
 }
-.v2{
-  top :10px;
-  left:10px  
-}
+
 .v2{
     top :10px;
     left:10px  
@@ -640,6 +707,10 @@ height: 60px;
     top :5px;
     left:33px  
   }
+  .v10{
+    top :45px;
+    left:33px  
+  }
 
 
 .virus_shadow{
@@ -649,4 +720,122 @@ height: 60px;
     left: 50%;
     top: 50%;
     transform:translate(-50%,-50%);
+}
+.beehome{
+    position: absolute;
+    width: 75vw;
+    top:50vh;
+    left:50vw;
+    transform:translate(-50%,-50%);
+    opacity: 0;
+}
+.closeup{
+    position: fixed;
+    top:0;
+    left:0;
+    height:"100vh";
+    width:"100vw";
+}
+.animal_text1{
+    position: absolute;
+    width: 45vw;
+    bottom: 5vh;
+    left: 50vw;
+    transform:translate(-50%,0%); 
+    opacity: 0;
+}
+.animal_text2{
+    position: absolute;
+    width: 40vw;
+    bottom: 5vh;
+    left: 50vw;
+    transform:translate(-50%,0%);
+    opacity: 0;
+}
+.symptom_text{
+    position: absolute;
+    width:50vw;
+    top:150vh;
+    left: 50vw;
+    transform:translate(-50%,50%);
+}
+.symptom_tri_cont{
+    width: 600;
+    
+    display: flex;
+    flex-direction:row;
+    background-color: rgb(209, 228, 38);
+}
+.symp_trigger1{
+    top:850px;
+    /* height:120vh; */
+    height: 1600px;
+    background-color: rgb(45, 73, 110);
+    width: 100px;
+    position: relative;
+    
+}
+.symp_trigger2{
+    top:2450px;
+    /* height:120vh; */
+    height: 6000px;
+    background-color: rgb(65, 170, 33);
+    width: 100px;
+    position: relative;
+    
+}
+.symptom_cont{
+    position: fixed;
+     background:radial-gradient(circle closest-side at center,#011230,#010C23); 
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    left:0;
+    z-index: 4;
+}
+.sympt_all{
+   position: absolute;;
+   top:100vh;
+   height: 100%;
+   width: 100%; 
+}
+.mans{
+    position: absolute;
+    left:50vw;
+    bottom:42vh;
+   height: 75vh;
+    transform:translate(-50%,50%);
+}
+.man_normal{
+    position: absolute;
+    left:50%;
+    top:50%;
+ height: 100%;
+    transform:translate(-50%,-50%);
+}
+.man_fever{
+    position: absolute;
+    left:50%;
+    top:50%;
+ height: 100%;
+    transform:translate(-50%,-50%);
+}
+.symptoms_virus_all{
+    position: fixed;
+    top:100vh;
+    left: 0;
+    width: 100vw;
+    height: 500vh;
+}
+.sym_1{
+    position: absolute;
+    width: 10vw;
+    top:10vh;
+    left:12vw;
+}
+.sym_2{
+    position: absolute;
+    width: 10vw;
+    top:50vh;
+    right:14vw;
 }
