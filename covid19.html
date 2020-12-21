@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/normalize.css" >
+    <link rel="stylesheet" href="style/covid19.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- bootstrap要加在jquery後 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"> </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" integrity="sha512-HzAEuXwhLxwm/Jj+5ecdjzrRVrjuh2ZeIxyT1Ln37TO5pWNMnKBuU7cfd1wvRQ/k86w1oC174Yk1T7aRlBpIcA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js" integrity="sha512-Ey+nIg+Ue8gUAaCNjR1KHR8nwDjWn9QXoQbynR/X+V66s6u1oqynnuRQ8zSgg5f5gBNb2Bzsu1pItCi3sPkbfA==" crossorigin="anonymous"></script>
+     -->
+
+     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    
+    <!-- 加上這行才能用settween()https://greensock.com/forums/topic/20673-settween-is-not-a-function/ -->
+    <!-- animation.gsap.min.js要在scrollmagic.min.js後面 https://github.com/janpaepke/ScrollMagic/issues/651 -->
+    
+</head>
+<body>
+  
+    <!-- 博士對話框 -->
+  <div id="welcome"> <!-- z-index:10 -->
+    <div class="first_bg" ></div>
+    <img class="dr_talk"src="img/covid19/dr_talk.svg">
+  <div class="first_boxall">
+       <img  class="first_box"src="img/covid19/first_box.svg">
+       <img class="first_button"src="img/covid19/first_button.svg">
+       <img class="first_button shade"src="img/covid19/first_btn_shade.png">
+</div>
+  </div>
+ 
+  <!-- 開投影機 -->
+<div class="lib_cont"><!-- z-index:9 -->
+  
+  <div  class="lib" id="lib_c">
+    <div class="machine">
+     
+      <img  class="twocircle" src="img/covid19/twocircle.svg">
+      <img  class="light_1" src="img/covid19/light_1.svg">
+     
+      <img  class="light_2" src="img/covid19/light_2.svg">
+      <img  class="light_3" src="img/covid19/light_3.svg">
+      
+    </div>
+  <img  src="img/covid19/lib2.svg">
+  </div>
+   <img  class="big_virus" src="img/covid19/big_virus@2x.png">
+</div>
+
+ 
+<div class="sq1"></div> <!-- z-index:0 -->
+<div class="lib_tri_cont">
+<div class="lib_trigger"></div>
+<div class="virus_trigger"></div>
+
+</div>
+<div class="lib_moveY"id="lib_moveY"></div>
+ <!-- 病毒介紹 -->
+ <div class="introduction_cont">
+    <div class="knowborder2">
+      <img  class="know_text" src="img/covid19/know_text.svg">
+    </div> 
+   <!-- <img class="knowborder2" src="img/covid19/know_border.svg"> -->
+ </div><!-- z-index:7 -->
+<div class="know_tri_cont">
+  <div class="know_trigger"></div>
+  <div class="virus_trigger2"></div>
+  <div class="know_trigger2"></div>
+  <div class="virus_trigger3"></div>
+</div>
+ <!-- 世界-->
+ <div class="world_tri_cont">
+  <div class="virus_trigger4"></div>
+  <div class="virus_trigger5"></div>
+  <div class="world_trigger2"></div>
+  <div class="world_trigger1"></div>
+  <div class="maplottie_moveY" id="maplottie_moveY"></div>
+  <div class="market_trigger1"></div>
+  <div class="market_trigger2"></div>
+</div>
+<div class="bat_tri_cont">
+<div class="bat_trigger1"></div>
+<div class="bat_trigger2"></div>
+<div class="bat_trigger3"></div>
+<div class="bat_trigger4"></div>
+</div>
+<div class="animals_tri_cont">
+  <div class="animals_trigger1"></div>
+  <div class="animals_trigger2"></div>
+  <div class="animals_trigger3"></div>
+  <div class="animals_trigger4"></div>
+  <div class="animals_trigger5"></div>
+  <div class="animals_trigger6"></div>
+</div>
+<div class="symptom_tri_cont">
+  <div class="symp_trigger1"></div>
+  <div class="symp_trigger2"></div>
+  <div class="symp_trigger3"></div>
+  <div class="symp_trigger4"></div>
+</div>
+<div class="puzzle_tri_cont">
+  <div class="puzzle_trigger1"></div>
+  <div class="puzzle_trigger2"></div>
+  <div class="puzzle_trigger3"></div>
+</div>
+
+<div class="prev_tri_cont">
+  <div class="prev_trigger1"></div>
+  <div class="prev_trigger2"></div>
+  <div class="prev_trigger3"></div>
+  <div class="prev_trigger4"></div>
+  <div class="prev_trigger5"></div>
+  <div class="prev_trigger6"></div>
+  <div class="prev_trigger7"></div>
+  <div class="prev_trigger8"></div>
+  <div class="prev_trigger9"></div>
+  <div class="prev_trigger10"></div>
+  <div class="prev_trigger11"></div>
+
+</div>
+ <div class="world_cont"><!--z-index: 6; -->
+  <div class="market_cont">
+    <img class="market_bg" src="img/covid19/market1.svg"><!--z-index: 5; -->
+    <div class="white_shade"></div>
+   </div>
+ <div class="maplottie" id="maplottie"></div>  <!--z-index: 8 -->
+ <div class="bat_cont">
+<img class="market_text1"src="img/covid19/market_text1.svg">
+<img class="market_text2"src="img/covid19/market_text2.svg">
+<div class="bat_con">
+<div class="bat">
+  <img class="bat_wing" src="img/covid19/bat_wing2@2x.png">
+  <img class="bat_body" src="img/covid19/bat_body.svg">
+  <img class="bat_name" src="img/covid19/bat_name.svg">
+</div>
+<img class="bat_text" src="img/covid19/bat_text3.svg">
+</div>
+ </div>
+<img class="wall_left" src="img/covid19/wall_left@2x.png">
+<img class="wall_right" src="img/covid19/wall_right_1@2x.png">
+
+</div>
+ <div class="symptom_cont"> <!--z-index: 4; -->
+  <div class="sympt_all  symtTextAndManMove">
+    <div class="mans">
+  <img class="man_normal" src="img/covid19/man_normal.svg">
+  <img class="man_fever man_other" src="img/covid19/man_fever.svg">
+  <img class="man_cough man_other" src="img/covid19/man_cough.svg">
+  <img class="man_phlegm man_other" src="img/covid19/man_phlegm.svg">
+  <img class="man_tired man_other" src="img/covid19/man_tired.svg">
+  <img class="man_breathe man_other" src="img/covid19/man_breathe.svg">
+  <img class="man_bodyh man_other" src="img/covid19/man_bodyh.svg">
+  <img class="man_headh man_other" src="img/covid19/man_headh.svg">
+</div> 
+</div>
+<div class="animals_cont0"></div>
+<div class="animals_cont">
+  <div class="closeup">
+  <img class="beehome" src="img/covid19/beehome.svg">
+<div class="animals_anime"id="animals_anime"></div>
+<!-- <div class="closeup symptom_text"> -->
+
+<!-- </div> -->
+</div>
+
+<img class="closeup symptom_text" src="img/covid19/symptom_text.svg">
+<div class="virus_small1 smallv">
+  <svg class="virus_small_svg">
+    <path class="path1" fill="none"d="M 0,0 A 45 45 0 1 1 50 50  A 45 45 0 0 1 0 0 "></path>
+    <path class="path2" fill="none"d="M -205 -158 L 80 150 L -50 640 Z"></path>
+    <path class="path3" fill="none"d="M 0,0 A 40,45 0 1,0 30 40  A 45,45 0 0,0 0 0 "></path>
+    <path class="path4" fill="none"d="M 0,0 A 20,20 0 1,1 30 20  A 45,45 0 0,0 0 0 "></path>
+    <path class="path5" fill="none"d="M 0,0 A 10,45 0 1,0 20 20  A 45,45 0 0,0 0 0 "></path>
+    <path class="path6" fill="none"d="M 0,0 A 40,25 0 1,1 -40 -30  A 45,45 0 0,0 0 0 "></path>
+    <path class="path7" fill="none"d="M 0,0 A 40,35 0 1,1 -20 -20  A 45,45 0 0,0 0 0 "></path>
+  </svg>
+  <div class="each_virus v1">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+
+  <div class="each_virus v3">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v4">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <!-- <div class="each_virus v5">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v6">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v7">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v8">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v9">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v10">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div> -->
+</div>
+<div class="virus_small2 smallv">
+  <svg class="virus_small_svg">
+    <path class="path1" fill="none"d="M 0,0 A 45 45 0 1 1 50 50  A 45 45 0 0 1 0 0 "></path>
+    <path class="path2" fill="none"d="M -205 -158 L 80 150 L -50 640 Z"></path>
+    <path class="path3" fill="none"d="M 0,0 A 40,45 0 1,0 30 40  A 45,45 0 0,0 0 0 "></path>
+    <path class="path4" fill="none"d="M 0,0 A 20,20 0 1,1 30 20  A 45,45 0 0,0 0 0 "></path>
+    <path class="path5" fill="none"d="M 0,0 A 10,45 0 1,0 20 20  A 45,45 0 0,0 0 0 "></path>
+    <path class="path6" fill="none"d="M 0,0 A 40,25 0 1,1 -40 -30  A 45,45 0 0,0 0 0 "></path>
+    <path class="path7" fill="none"d="M 0,0 A 40,35 0 1,1 -20 -20  A 45,45 0 0,0 0 0 "></path>
+  </svg>
+  <!-- <div class="each_virus v1">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+
+  <div class="each_virus v3">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v4">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div> -->
+  <div class="each_virus v5">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v6">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v7">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <!-- <div class="each_virus v8">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v9">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v10">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div> -->
+</div>
+<div class="virus_small3 smallv">
+  <svg class="virus_small_svg">
+    <path class="path1" fill="none"d="M 0,0 A 45 45 0 1 1 50 50  A 45 45 0 0 1 0 0 "></path>
+    <path class="path2" fill="none"d="M -205 -158 L 80 150 L -50 640 Z"></path>
+    <path class="path3" fill="none"d="M 0,0 A 40,45 0 1,0 30 40  A 45,45 0 0,0 0 0 "></path>
+    <path class="path4" fill="none"d="M 0,0 A 20,20 0 1,1 30 20  A 45,45 0 0,0 0 0 "></path>
+    <path class="path5" fill="none"d="M 0,0 A 10,45 0 1,0 20 20  A 45,45 0 0,0 0 0 "></path>
+    <path class="path6" fill="none"d="M 0,0 A 40,25 0 1,1 -40 -30  A 45,45 0 0,0 0 0 "></path>
+    <path class="path7" fill="none"d="M 0,0 A 40,35 0 1,1 -20 -20  A 45,45 0 0,0 0 0 "></path>
+  </svg>
+  <!-- <div class="each_virus v1">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+
+  <div class="each_virus v3">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v4">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v5">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v6">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v7">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div> -->
+  <div class="each_virus v8">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v9">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+  <div class="each_virus v10">
+    <img class="virus_shadow" src="img/covid19/virus_shadow2.svg">
+  </div>
+</div>
+<img class="animal_text1" src="img/covid19/animal_text1_2.svg">
+<img class="animal_text2" src="img/covid19/animal_text2_2.svg">
+</div>
+
+  
+
+</div>
+<div class="prev_bg">
+  <img class="prev_text1" src="img/covid19/prevent_text1.svg">
+</div>
+<div class="bgcenter"></div>
+<div class="symptoms_virus_all"> 
+  <!-- z-index15 -->
+  <div class="sym_1pos">
+    <div class="sym_1">
+      <img class="sym_1_l sym_light" src="img/covid19/sym_1_light.svg">
+  <img class="sym_v sym_z" src="img/covid19/sym_1.svg">
+</div>
+  <img class="sym_1_text sym_t" src="img/covid19/sym_1_text.svg">
+</div>
+<div class="sym_2pos">
+  <img class="sym_2_text sym_t" src="img/covid19/sym_2_text.svg">
+  <div class="sym_2">
+    <img class="sym_2_l sym_light" src="img/covid19/sym_2_light.svg">
+<img class="sym_v sym_z" src="img/covid19/sym_2.svg">
+</div>
+</div>
+<div class="sym_3pos">
+  <img class="sym_3_text sym_t" src="img/covid19/sym_3_text.svg">
+  <div class="sym_3">
+    <img class="sym_3_l sym_light" src="img/covid19/sym_3_light.svg">
+<img class="sym_v sym_z" src="img/covid19/sym_3.svg">
+</div>
+</div>
+<div class="sym_4pos">
+  <div class="sym_4">
+    <img class="sym_4_l sym_light" src="img/covid19/sym_4_light.svg">
+<img class="sym_v sym_z" src="img/covid19/sym_4.svg">
+</div>
+  <img class="sym_4_text sym_t" src="img/covid19/sym_4_text.svg">
+</div>
+<div class="sym_5pos">
+  <img class="sym_5_text sym_t" src="img/covid19/sym_5_text.svg">
+  <div class="sym_5">
+    <img class="sym_5_l sym_light" src="img/covid19/sym_5_light.svg">
+<img class="sym_v sym_z" src="img/covid19/sym_5.svg">
+</div>
+ 
+</div>
+<div class="sym_6pos">
+  <img class="sym_6_text sym_t" src="img/covid19/sym_6_text.svg">
+  <div class="sym_6">
+    <img class="sym_6_l sym_light" src="img/covid19/sym_6_light.svg">
+<img class="sym_v sym_z" src="img/covid19/sym_6.svg">
+</div>
+</div>
+<div class="sym_7pos">
+  
+  <div class="sym_7">
+    <img class="sym_7_l sym_light" src="img/covid19/sym_7_light.svg">
+<img class="sym_v sym_z" src="img/covid19/sym_7.svg">
+</div>
+  <img class="sym_7_text sym_t" src="img/covid19/sym_7_text.svg">
+</div>
+
+
+</div>
+<div class="sym_texts_cont_bg symout">
+
+</div>
+<img class="little_all symout" src="img/covid19/littlevirus_all.svg">
+<!-- z-index: 11; -->
+<div class="sym_text_contents">
+<img class="sym_text_2 symtTextAndManMove" src="img/covid19/symptom_text2.svg">
+<img class="sym_text_3 symtTextAndManMove" src="img/covid19/symptom_text3.svg">
+</div>
+<div class="puzzle_cont">
+<div class="tvlottie_cont"id="tvlottie_cont"></div>
+<div class="puzzle">
+<div class="p1pos">
+<div class="p1_f_c"id="p1_f" draggable="true">
+  <img class="p1_light" src="img/covid19/p1_light.svg"draggable="false">
+  <img class="p1_f"  src="img/covid19/puzzle_1_t.svg" draggable="false">
+<img class="p1_f p1_ff"  src="img/covid19/puzzle_1_f.svg" draggable="false">
+<img class="p1_f p1_shade" src="img/covid19/p1_shade.svg"draggable="false">
+</div>
+<img class="p1_text" src="img/covid19/p1_text.svg">
+</div> 
+<div class="p2pos">
+  <div class="p2_f_c"id="p2_f" draggable="true">
+    <img class="p2_light" src="img/covid19/p2_light.svg"draggable="false">
+    <img class="p2_f"  src="img/covid19/puzzle_2_t.svg" draggable="false">
+  <img class="p2_f p2_ff"  src="img/covid19/puzzle_2_f.svg" draggable="false">
+  <img class="p2_f p2_shade" src="img/covid19/p2_shade.svg"draggable="false">
+  </div>
+  <img class="p2_text" src="img/covid19/p2_text.svg">
+  </div> 
+  <div class="p3pos">
+    <div class="p2_f_c"id="p3_f" draggable="true">
+      <img class="p3_light" src="img/covid19/p3_light.svg"draggable="false">
+      <img class="p3_f"  src="img/covid19/puzzle_3_t.svg" draggable="false">
+    <img class="p3_f p3_ff"  src="img/covid19/puzzle_3_f.svg" draggable="false">
+    <img class="p3_f p3_shade" src="img/covid19/p3_shade.svg"draggable="false">
+    </div>
+    <img class="p3_text" src="img/covid19/p3_text.svg">
+    </div> 
+    <div class="p4pos">
+      <div class="p2_f_c"id="p4_f" draggable="true">
+        <img class="p4_light" src="img/covid19/p4_light.svg"draggable="false">
+        <img class="p4_f"  src="img/covid19/puzzle_4_t.svg" draggable="false">
+      <img class="p4_f p4_ff"  src="img/covid19/puzzle_4_f.svg" draggable="false">
+      <img class="p4_f p4_shade" src="img/covid19/p4_shade.svg"draggable="false">
+      </div>
+      <img class="p4_text" src="img/covid19/p4_text.svg">
+      </div> 
+<div class="emp_cont">
+  <div class="empcard">
+  <div class="face back">
+    <img class="puzzle_merge" src="img/covid19/puzzle_merge.svg">
+  </div>
+  <div class="face front">
+<div class="p1_ept_c" id="p1_ept_c">
+<img class="p1_f p1_ept" id="p1_ept" src="img/covid19/puzzle_1_ept.svg">
+<div class="p_t_c"></div>
+</div>
+<div class="p2_ept_c" id="p2_ept_c">
+  <img class="p2_f" id="p1_ept" src="img/covid19/puzzle_2_ept.svg">
+  <div class="p_t_c"></div>
+</div>
+<div class="p3_ept_c" id="p3_ept_c">
+  <img class="p3_f" id="p3_ept" src="img/covid19/puzzle_3_ept.svg">
+  <div class="p_t_c"></div>
+</div>
+<div class="p4_ept_c" id="p4_ept_c">
+  <img class="p4_f" id="p1_ept" src="img/covid19/puzzle_4_ept.svg">
+  <div class="p_t_c"></div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="prevent_cont">
+  <div class="pre_all_pos">
+<div class="prevA_cont prevAB">
+  <div class="pre1_cont pre_each">
+    <img class="previmg_1" src="img/covid19/prev_img_1.svg">
+    <img class="prevshad_1 shad" src="img/covid19/prev_shad_1.svg">
+  </div>
+  <div class="pre2_cont pre_each">
+    <img class="previmg_2" src="img/covid19/prev_img_2.svg">
+    <img class="prevshad_2 shad" src="img/covid19/prev_shad_2.svg">
+  </div>
+  <div class="pre3_cont pre_each">
+    <img class="previmg_3" src="img/covid19/prev_img_3.svg">
+    <img class="prevshad_3 shad" src="img/covid19/prev_shad_3.svg">
+  </div>
+  <div class="pre4_cont pre_each">
+    <img class="previmg_4" src="img/covid19/prev_img_4.svg">
+    <img class="prevshad_4 shad" src="img/covid19/prev_shad_4.svg">
+  </div>
+</div>
+<div class="prevB_cont prevAB">
+  <div class="pre5_cont pre_each">
+    <img class="previmg_5" src="img/covid19/prev_img_5.svg">
+    <img class="prevshad_5 shad" src="img/covid19/prev_shad_5.svg">
+  </div>
+  <div class="pre6_cont pre_each">
+    <img class="previmg_6" src="img/covid19/prev_img_6.svg">
+    <img class="prevshad_6 shad" src="img/covid19/prev_shad_6.svg">
+  </div>
+  <div class="pre7_cont pre_each">
+    <img class="previmg_7" src="img/covid19/prev_img_7.svg">
+    <img class="prevshad_7 shad" src="img/covid19/prev_shad_7.svg">
+  </div>
+  <div class="pre8_cont pre_each">
+    <img class="previmg_8" src="img/covid19/prev_img_8.svg">
+    <img class="prevshad_8 shad" src="img/covid19/prev_shad_8.svg">
+  </div>
+</div>
+</div>
+<div class="gov_cont">
+<div class="top">
+  <div class="gtc1">
+  <img class="gov_text1" src="img/covid19/gov_text_1.png">
+</div>
+<div class="gtc3">
+  <img class="gov_text3" src="img/covid19/gov_text_3.png">
+</div>
+
+</div>
+
+
+<div class="bot">
+<div class="gtc2">
+  <img class="gov_text2" src="img/covid19/gov_text_2.png">
+</div>
+<div class="gtc4">
+  <img class="gov_text4" src="img/covid19/gov_text_4.png">
+</div>
+</div>
+
+<div class="mid">
+  <div class="line_cont"> 
+  <img class="circ1" src="img/covid19/ball.svg">
+  <img class="line" src="img/covid19/line.png">
+  <img class="circ2" src="img/covid19/ball.svg">
+</div>
+  <img class="date1" src="img/covid19/date_1.png">
+  <img class="date2" src="img/covid19/date_2.png">
+  <img class="date3" src="img/covid19/date_3.png">
+  <img class="date4" src="img/covid19/date_4.png">
+</div>
+
+
+</div>
+
+</div>
+
+      <script src="js/covid19.js"></script>
+</body>
+</html>
