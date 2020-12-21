@@ -1,6 +1,6 @@
 body{
     background-color: #000;
-    height: 50000px;
+    height: 55000px;
   width: 100vw;
   overflow: hidden;
 }
@@ -19,7 +19,7 @@ body{
     background: -webkit-linear-gradient(#00060A,#001C2B);
     height: 100vh;
     width: 100vw;
-    opacity: 0.7;
+    
 }
 .first_boxall{
     width: 46vw;
@@ -825,6 +825,46 @@ z-index: 0;
     width: 100px;
     position: relative;
 }
+.fast5_id{
+    top:-800px;
+    /* height:120vh; */
+    height: 100px;
+    background-color: rgb(66, 139, 44);
+    width: 100px;
+    position: relative;
+}
+.fast4_id{
+    top:-100px;
+    /* height:120vh; */
+    height: 100px;
+    background-color: rgb(66, 139, 44);
+    width: 100px;
+    position: relative;
+}
+.fast3_id{
+    top:400px;
+    /* height:120vh; */
+    height: 100px;
+    background-color: rgb(66, 139, 44);
+    width: 100px;
+    position: relative;
+}
+.fast2_id{
+    top:0px;
+    /* height:120vh; */
+    height: 100px;
+    background-color: rgb(66, 139, 44);
+    width: 100px;
+    position: relative;
+}
+.fast1_id{
+    top:0px;
+    /* height:120vh; */
+    height: 100px;
+    background-color: rgb(66, 139, 44);
+    width: 100px;
+    position: relative;
+}
 .puzzle_trigger3{
     top:6000px;
     /* height:120vh; */
@@ -833,6 +873,15 @@ z-index: 0;
     width: 100px;
     position: relative;
 }
+.fast6_id{
+    top:7900px;
+    /* height:120vh; */
+    height: 100px;
+    background-color: rgb(66, 139, 44);
+    width: 100px;
+    position: relative;
+}
+
 .prev_tri_cont{
    width: 100vw;
     /* height: 4100px; */
@@ -928,6 +977,38 @@ z-index: 0;
     width: 100px;
     position: relative;
 }
+.prev_trigger12{
+    top:7500px;
+    /* height:120vh; */
+    height: 1000px;
+    background-color: rgb(71, 216, 148);
+    width: 100px;
+    position: relative;
+}
+.prev_trigger13{
+    top:8500px;
+    /* height:120vh; */
+    height: 1000px;
+    background-color: rgb(50, 109, 158);
+    width: 100px;
+    position: relative;
+}
+.prev_trigger14{
+    top:9300px;
+    /* height:120vh; */
+    height: 500px;
+    background-color: rgb(50, 109, 158);
+    width: 100px;
+    position: relative;
+}
+.prev_trigger14{
+    top:9500px;
+    /* height:120vh; */
+    height: 300px;
+    background-color: rgb(50, 109, 158);
+    width: 100px;
+    position: relative;
+}
 .symptom_cont{
     position: fixed;
      background:radial-gradient(circle closest-side at center,#011230,#010C23); 
@@ -949,7 +1030,7 @@ z-index: 0;
 }
 .prev_bg{
     position: fixed;
-     /* background:linear-gradient(#01002A -30%,#94ECD2 70%); */
+     background:linear-gradient(#01002A -30%,#94ECD2 70%);
     height: 100vh;
     width: 100vw;
     top:0;
@@ -1813,4 +1894,208 @@ transform: translate(-50%,-50%);
     top:50%;
 left:80%;
 transform: translate(-50%,-50%);
+}
+
+
+
+
+
+
+.f_lib_cont{
+    height: 100vh;
+    position: fixed;
+    z-index:2 ;
+    width: 100vw;
+    top:100vh
+    }
+    /* .lib_trigger的height可以控制scroll速率，
+    .lib_moveY的height跟lib的位移距離有關 */
+    .fmachine{
+        width: 20vw;
+        height: 30vw;
+        /* background-color: #fff; */
+        left: 50vw;
+        position: absolute;
+        bottom: 10vw;
+        transform:translate(-50%,0%);
+    }
+    .ftwocircle{
+        left: 50%;
+        transform:translate(-50%,0%);
+        position: absolute;
+        bottom:-50vw;
+        width: 98%;
+    }
+ 
+    .f_lib{
+        z-index:2 ;
+        position: absolute;
+        bottom:-100vh ;
+        width: 100vw;
+        height: 100vh;
+        top:100vh;
+        background-color: #00060A;
+    }
+  .final_light{
+      position: absolute;
+      width: 100vw;
+      height: 150vh;
+      top:0;
+      left: 0;
+  }
+  .finaldoctor{
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      top:100vh;
+    opacity: 0;
+      background: -webkit-linear-gradient(#00060A,#001C2B);
+      
+  }
+  .final_text{
+      position: absolute;
+      width: 50vw;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+  }
+  .over_doctor{
+    position: absolute;
+      width: 20vw;
+      right: 10vw;
+      bottom:-10vh;
+
+  }
+  .topbutton{
+    position: absolute;  
+    width: 5vw;
+bottom: 5vh;
+left: 50%;
+transform: translate(-50%);
+  }
+  .sidebars{
+      position: fixed;
+      z-index: 19;
+      right:0;
+      top:0;
+      height: 100vh;
+      width: 7vw;
+      /* background-color: #fff; */
+  }
+  .circles{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 35vh;
+      
+      transform: translate(-50% ,-50%);
+    
+      display: flex;
+      flex-direction:column;
+      justify-content: space-around;
+  }
+  .circle_each{
+      height: 1.7vh;
+      width: 1.7vh;
+      background-color: #fff;
+      border-radius: 50%;
+  }
+  .fast_cont{
+      position: absolute;
+      top:0;
+      right: -7vw;
+      background-color:  rgba(0,0,0,0.5);
+      height: 100%;
+      width: 100%;
+      transition: right 1s;
+  }
+  .fast_all{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 80vh;
+    width: 80%;
+    transform: translate(-50% ,-50%);
+  /* background-color: #fff; */
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+  }
+  .fasts{
+   position: relative;
+      width: 100%;
+      height: 15%;
+      /* background-color: yellow; */
+      
+  
+  }
+  .fast2{
+    height: 18%;
+  }
+  .fast3{
+    height: 18%;
+    bottom:0.8vw;
+  }
+  .fast_texts{
+      width: 5vw;
+    position: absolute;
+
+left: 50%;
+bottom: 0;
+transform: translate(-50% ,-5%);
+  }
+
+  .fast1_img{
+      width: 60%;
+      
+      position: absolute;
+  
+  left: 50%;
+  bottom: 1.7vw;
+  transform: translate(-50% ,0%);
+  }
+  .fast2_img{
+    width: 95%;
+    
+    position: absolute;
+
+left: 50%;
+bottom: 3vw;
+transform: translate(-50% ,0%);
+}
+.fast3_img{
+    width: 70%;
+    
+    position: absolute;
+
+left: 50%;
+bottom: 3.4vw;
+transform: translate(-50% ,0%);
+}
+.fast4_img{
+    width: 30%;
+    
+    position: absolute;
+
+left: 50%;
+bottom: 3w;
+transform: translate(-50% ,0%);
+}
+.fast5_img{
+    width: 50%;
+    
+    position: absolute;
+
+left: 50%;
+bottom: 2vw;
+transform: translate(-50% ,0%);
+}
+.fast6_img{
+    width: 80%;
+    
+    position: absolute;
+
+left: 50%;
+bottom: 2vw;
+transform: translate(-50% ,0%);
 }

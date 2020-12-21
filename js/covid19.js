@@ -9,12 +9,13 @@ async function Loadtop(){
   $('#welcome').hide();
   document.documentElement.style.overflowY = 'scroll'; 
 //   document.documentElement.style.overflowX = 'hidden'; 
-let v_ani=gsap.timeline() 
+let v_ani1=gsap.timeline() 
 
 
-v_ani.to(".light_3",{opacity:1,duration:0},"<")
-v_ani.to(".light_1",{opacity:1,duration:0},"<")
-v_ani.to(".big_virus",{opacity:1,duration:0},"<")
+v_ani1.to(".light_3",{opacity:1,duration:0},"<")
+v_ani1.to(".light_1",{opacity:1,duration:0},"<")
+v_ani1.to(".big_virus",{opacity:1,duration:0},"<")
+
 }
 }
 
@@ -35,13 +36,14 @@ $(document).ready(function() {
      $('#welcome').hide();
      document.documentElement.style.overflowY = 'scroll'; 
    //   document.documentElement.style.overflowX = 'hidden'; 
-   let v_ani=gsap.timeline() 
+   let v_ani2=gsap.timeline() 
    
  
 
-   v_ani.to(".light_3",{opacity:1,duration:0},"<")
-   v_ani.to(".light_1",{opacity:1,duration:0},"<")
-   v_ani.to(".big_virus",{opacity:1,duration:0},"<")
+   v_ani2.to(".light_3",{opacity:1,duration:0},"<")
+   v_ani2.to(".light_1",{opacity:1,duration:0},"<")
+   v_ani2.to(".big_virus",{opacity:1,duration:0},"<")
+   v_ani2.to(".big_virus",{x:0,duration:0},"<")
    }
    }
   Loadtop();
@@ -106,7 +108,7 @@ $(document).ready(function() {
     
     virus_scroll.to(".big_virus",{y:　-15,scale:1.2,ease:"none"})
     //下面那行不加的話，big_virus一開始會從-300出現
-    virus_scroll.from(".big_virus",{x:0});
+    virus_scroll.to(".big_virus",{x:0,duration:0},"<")
     virus_scroll.to(".big_virus",{x:　"-23vw",rotateZ:"10deg",ease:"none"},)
 
   
@@ -174,10 +176,12 @@ function getScrollTop(){
   return bodyTop
   }
   let proAnime=gsap.timeline({paused:true}) 
- 
+  
   proAnime.from(".light_2",{opacity:0,duration:2,delay:1})
+  proAnime.to(".big_virus",{x:0,duration:0},"<")
   proAnime.from(".light_3",{opacity:0,duration:2},"-=1")
   proAnime.from(".light_1",{opacity:0,duration:1.5},"-=1.5")
+  
   proAnime.from(".big_virus",{y:20,opacity:0,duration:3,onComplete:function(){ document.documentElement.style.overflowY = 'scroll';
   document.documentElement.style.overflowX = 'hidden'; 
 }},"-=1.5")
@@ -256,7 +260,7 @@ let virus_scroll3 = gsap.timeline({
   } 
 });
 
-virus_scroll3.from(".big_virus",{x:-300});
+virus_scroll3.from(".big_virus",{x:"-23vw"});
 let flashBool = true;
 let virusFlash = anime({
   targets: '.big_virus',
@@ -1193,7 +1197,7 @@ let showprev1= gsap.timeline({
    //pin:true,
     scrub: true,
     
-markers:true,
+//markers:true,
 onEnter:()=>{},
 onLeave:()=>{},
 onEnterBack:()=>{},
@@ -1246,7 +1250,7 @@ $(this).css("top","100%");
       end:"bottom center",
      //pin:true,
       //scrub:true,
-  markers:true,
+ // markers:true,
   onLeave:()=>{
   
   },
@@ -1265,7 +1269,7 @@ $(this).css("top","100%");
      //pin:true,
       scrub: true,
       
-  markers:true,
+ // markers:true,
   onEnter:()=>{},
   onLeave:()=>{},
   onEnterBack:()=>{},
@@ -1283,7 +1287,7 @@ $(this).css("top","100%");
      //pin:true,
       scrub: true,
       
-  markers:true,
+ // markers:true,
   onEnter:()=>{},
   onLeave:()=>{},
   onEnterBack:()=>{},
@@ -1301,7 +1305,7 @@ $(this).css("top","100%");
      //pin:true,
     //  scrub: true,
       
-  markers:true,
+//  markers:true,
   onEnter:()=>{},
   onLeave:()=>{},
   onEnterBack:()=>{},
@@ -1320,7 +1324,7 @@ $(this).css("top","100%");
      //pin:true,
       scrub: true,
       
-  markers:true,
+//  markers:true,
   onEnter:()=>{},
   onLeave:()=>{},
   onEnterBack:()=>{},
@@ -1338,7 +1342,7 @@ $(this).css("top","100%");
      //pin:true,
     //  scrub: true,
       
-  markers:true,
+  //markers:true,
   onEnter:()=>{},
   onLeave:()=>{},
   onEnterBack:()=>{},
@@ -1357,7 +1361,7 @@ $(this).css("top","100%");
      //pin:true,
       scrub: true,
       
-  markers:true,
+  // markers:true,
   onEnter:()=>{},
   onLeave:()=>{},
   onEnterBack:()=>{},
@@ -1375,7 +1379,7 @@ $(this).css("top","100%");
      //pin:true,
     //  scrub: true,
       
-  markers:true,
+  // markers:true,
   onEnter:()=>{},
   onLeave:()=>{},
   onEnterBack:()=>{},
@@ -1394,7 +1398,7 @@ $(this).css("top","100%");
      //pin:true,
       scrub: true,
       
-  markers:true,
+  // markers:true,
   onEnter:()=>{},
   onLeave:()=>{},
   onEnterBack:()=>{},
@@ -1412,7 +1416,7 @@ $(this).css("top","100%");
      //pin:true,
     //  scrub: true,
       
-  markers:true,
+  // markers:true,
   onEnter:()=>{},
   onLeave:()=>{},
   onEnterBack:()=>{},
@@ -1431,7 +1435,7 @@ $(this).css("top","100%");
      //pin:true,
       scrub: true,
       
-  markers:true,
+  // markers:true,
   onEnter:()=>{},
   onLeave:()=>{},
   onEnterBack:()=>{},
@@ -1439,3 +1443,175 @@ $(this).css("top","100%");
     } 
   });
   govanime9.to(".line_cont",{width:"100%"})
+
+  let gov_out= gsap.timeline({
+    scrollTrigger:{
+      trigger:".prev_trigger12",
+      start:"top center",
+      end:"bottom center",
+      //  toggleActions:"restart none none reverse",
+     //pin:true,
+      scrub: true,
+      
+  // markers:true,
+  onEnter:()=>{},
+  onLeave:()=>{},
+  onEnterBack:()=>{},
+  onLeaveBack:()=>{}
+    } 
+  });
+  gov_out.to(".prevent_cont",{opacity:0,duration:4})
+  gov_out.to(".prevent_cont",{y:0})
+
+  let final_lib= gsap.timeline({
+    scrollTrigger:{
+      trigger:".prev_trigger13",
+      start:"top center",
+      end:"bottom center",
+     
+     //pin:true,
+      scrub: true,
+      
+  // markers:true,
+  onEnter:()=>{},
+  onLeave:()=>{},
+  onEnterBack:()=>{},
+  onLeaveBack:()=>{}
+    } 
+  });
+
+  final_lib.to(".prev_bg",{y:"-190vh"})
+  
+  let show_f_doctor= gsap.timeline({
+    scrollTrigger:{
+      trigger:".prev_trigger14",
+      start:"top center",
+      end:"bottom center",
+        toggleActions:"restart none none reverse",
+     //pin:true,
+    //  scrub: true,
+      
+  // markers:true,
+  onEnter:()=>{},
+  onLeave:()=>{},
+  onEnterBack:()=>{},
+  onLeaveBack:()=>{}
+    } 
+  });
+  show_f_doctor.to(".finaldoctor",0.3,{y:"-100vh"})
+  show_f_doctor.to(".finaldoctor",0.3,{opacity:0.7})
+  $(".sidebars").hover(function(){
+    $(".fast_cont").css("right","0")
+    $(".circles").fadeOut(500)
+   },function(){
+    $(".fast_cont").css("right","-7vw")
+    $(".circles").fadeIn(500)
+   } )
+
+   let change_color1= gsap.timeline({
+    scrollTrigger:{
+      trigger:".fast1_id",
+      start:"top center",
+      end:"bottom center",
+        toggleActions:"restart none none reverse",
+     //pin:true,
+      scrub: true,
+ 
+    } 
+  });
+  change_color1.to(".cc1",{backgroundColor:"orange"})
+  change_color1.to(".cc2",{backgroundColor:"white"},"<")
+  change_color1.to(".cc3",{backgroundColor:"white"},"<")
+  change_color1.to(".cc4",{backgroundColor:"white"},"<")
+  change_color1.to(".cc5",{backgroundColor:"white"},"<")
+  change_color1.to(".cc6",{backgroundColor:"white"},"<")
+
+  let change_color2= gsap.timeline({
+    scrollTrigger:{
+      trigger:".fast2_id",
+      start:"top center",
+      end:"bottom center",
+        toggleActions:"restart none none reverse",
+     //pin:true,
+      scrub: true,
+ 
+    } 
+  });
+  change_color2.to(".cc1",{backgroundColor:"white"})
+  change_color2.to(".cc2",{backgroundColor:"orange"},"<")
+  change_color2.to(".cc3",{backgroundColor:"white"},"<")
+  change_color2.to(".cc4",{backgroundColor:"white"},"<")
+  change_color2.to(".cc5",{backgroundColor:"white"},"<")
+  change_color2.to(".cc6",{backgroundColor:"white"},"<")
+
+  let change_color3= gsap.timeline({
+    scrollTrigger:{
+      trigger:".fast3_id",
+      start:"top center",
+      end:"bottom center",
+        toggleActions:"restart none none reverse",
+     //pin:true,
+      scrub: true,
+ 
+    } 
+  });
+  change_color3.to(".cc1",{backgroundColor:"white"})
+  change_color3.to(".cc3",{backgroundColor:"orange"},"<")
+  change_color3.to(".cc2",{backgroundColor:"white"},"<")
+  change_color3.to(".cc4",{backgroundColor:"white"},"<")
+  change_color3.to(".cc5",{backgroundColor:"white"},"<")
+  change_color3.to(".cc6",{backgroundColor:"white"},"<")
+  
+  let change_color4= gsap.timeline({
+    scrollTrigger:{
+      trigger:".fast4_id",
+      start:"top center",
+      end:"bottom center",
+        toggleActions:"restart none none reverse",
+     //pin:true,
+      scrub: true,
+ 
+    } 
+  });
+  change_color4.to(".cc1",{backgroundColor:"white"})
+  change_color4.to(".cc4",{backgroundColor:"orange"},"<")
+  change_color4.to(".cc2",{backgroundColor:"white"},"<")
+  change_color4.to(".cc3",{backgroundColor:"white"},"<")
+  change_color4.to(".cc5",{backgroundColor:"white"},"<")
+  change_color4.to(".cc6",{backgroundColor:"white"},"<")
+
+  let change_color5= gsap.timeline({
+    scrollTrigger:{
+      trigger:".fast5_id",
+      start:"top center",
+      end:"bottom center",
+        toggleActions:"restart none none reverse",
+     //pin:true,
+      scrub: true,
+ 
+    } 
+  });
+  change_color5.to(".cc1",{backgroundColor:"white"})
+  change_color5.to(".cc5",{backgroundColor:"orange"},"<")
+  change_color5.to(".cc2",{backgroundColor:"white"},"<")
+  change_color5.to(".cc3",{backgroundColor:"white"},"<")
+  change_color5.to(".cc4",{backgroundColor:"white"},"<")
+  change_color5.to(".cc6",{backgroundColor:"white"},"<")
+
+  let change_color6= gsap.timeline({
+    scrollTrigger:{
+      trigger:".fast6_id",
+      start:"top center",
+      end:"bottom center",
+        toggleActions:"restart none none reverse",
+     //pin:true,
+      scrub: true,
+ 
+    } 
+  });
+  change_color6.to(".cc1",{backgroundColor:"white"})
+  change_color6.to(".cc6",{backgroundColor:"orange"},"<")
+  change_color6.to(".cc2",{backgroundColor:"white"},"<")
+  change_color6.to(".cc3",{backgroundColor:"white"},"<")
+  change_color6.to(".cc4",{backgroundColor:"white"},"<")
+  change_color6.to(".cc5",{backgroundColor:"white"},"<")
