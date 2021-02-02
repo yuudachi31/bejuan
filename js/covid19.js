@@ -19,7 +19,7 @@ v_ani1.to(".big_virus",{opacity:1,duration:0},"<")
 }
 }
 
-$(document).ready(function() {
+$(window).ready(function() {
   $(".man_fever").hide();
   $(".sym_t").css("visibility","hidden");
   // $('.sym_t').hide();
