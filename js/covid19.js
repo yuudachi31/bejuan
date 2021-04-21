@@ -501,7 +501,7 @@ let animals_anime_data = {
   loop: false,
   prerender: true,
   autoplay: false,
-  path: 'json/animals.json'
+  path: 'json/map3.json'
   //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
 };
 let animals_anime_Anim = bodymovin.loadAnimation(animals_anime_data);
@@ -813,7 +813,7 @@ smallvirus_move3.to(".virus_small3",{x:"0vw",y:"10vw",duration:2});
      //pin:true,
       scrub:true,
       
-//  markers:true,
+  markers:true,
 onEnter:()=>{},
 onLeave:()=>{$('.smallv').fadeOut(300)},
 onEnterBack:()=>{$('.smallv').fadeIn(500)},
@@ -822,7 +822,7 @@ onLeaveBack:()=>{}
   });
   animal_out2.to(".sympt_all",{y:"-100vh",});
   animal_out2.to(".smallv",{x:"0vw",y:"0vh"},"<");
-  
+  animal_out2.to(".symptoms_virus_all2",{y:"-100vh"},"<");
 
 
   $(".sym_1").hover(function(){
@@ -854,7 +854,7 @@ onLeaveBack:()=>{}
   
   $(".sym_3").hover(function(){
     $('.man_tired').show();
-    $('.sym_3_l').show();
+    $('.sym_3_l').show();s
     $(".sym_3_text").css("visibility","visible");
     // $('.sym_2_text').show();
     $('.man_normal').hide();
@@ -934,8 +934,8 @@ onLeaveBack:()=>{}
     
   });
 
-  symptom_y.to(".symptoms_virus_all",{y:"-440vh",ease:"none"});
-
+  // symptom_y.to(".symptoms_virus_all",{y:"-440vh",ease:"none"});
+  
 
   let symptomfinal = gsap.timeline({
     scrollTrigger:{
@@ -1500,14 +1500,57 @@ $(this).css("top","100%");
   });
   show_f_doctor.to(".finaldoctor",0.3,{y:"-100vh"})
   show_f_doctor.to(".finaldoctor",0.3,{opacity:0.7})
-  $(".sidebars").hover(function(){
-    $(".fast_cont").css("right","0")
-    $(".circles").fadeOut(500)
-   },function(){
-    $(".fast_cont").css("right","-7vw")
-    $(".circles").fadeIn(500)
-   } )
+  // $(".sidebars").hover(function(){
+  //   $(".fast_cont").css("right","0")
+  //   $(".circles").fadeOut(500)
+  //  },function(){
+  //   $(".fast_cont").css("right","-7vw")
+  //   $(".circles").fadeIn(500)
+  //  } )
 
+
+  $(".cc1").hover(function(){
+    $(".cc1").css({"height":"2.8vh","width":"2.8vh"}),
+    $(".fast_t1").css("width","14vh")
+  } ,function(){
+    $(".cc1").css({"height":"1.5vh","width":"1.5vh"}),
+      $(".fast_t1").css("width","0vh")
+  })
+  $(".cc2").hover(function(){
+    $(".cc2").css({"height":"2.8vh","width":"2.8vh"})
+    ,$(".fast_t2").css("width","14vh")
+  } ,function(){
+    $(".cc2").css({"height":"1.5vh","width":"1.5vh"})
+     $(".fast_t2").css("width","0vh")
+  })
+  $(".cc3").hover(function(){
+    $(".cc3").css({"height":"2.8vh","width":"2.8vh"})
+    ,$(".fast_t3").css("width","14vh")
+  } ,function(){
+    $(".cc3").css({"height":"1.5vh","width":"1.5vh"})
+    $(".fast_t3").css("width","0vh")
+  })
+  $(".cc4").hover(function(){
+    $(".cc4").css({"height":"2.8vh","width":"2.8vh"})
+    ,$(".fast_t4").css("width","14vh")
+  } ,function(){
+    $(".cc4").css({"height":"1.5vh","width":"1.5vh"})
+    ,$(".fast_t4").css("width","0vh")
+  })
+  $(".cc5").hover(function(){
+    $(".cc5").css({"height":"2.8vh","width":"2.8vh"})
+    ,$(".fast_t5").css("width","14vh")
+  } ,function(){
+    $(".cc5").css({"height":"1.5vh","width":"1.5vh"})
+    ,$(".fast_t5").css("width","0vh")
+  })
+  $(".cc6").hover(function(){
+    $(".cc6").css({"height":"2.8vh","width":"2.8vh"})
+    ,$(".fast_t6").css("width","14vh")
+  } ,function(){
+    $(".cc6").css({"height":"1.5vh","width":"1.4vh"})
+    ,$(".fast_t6").css("width","0vh")
+  })
    let change_color1= gsap.timeline({
     scrollTrigger:{
       trigger:".fast1_id",
@@ -1615,3 +1658,10 @@ $(this).css("top","100%");
   change_color6.to(".cc3",{backgroundColor:"white"},"<")
   change_color6.to(".cc4",{backgroundColor:"white"},"<")
   change_color6.to(".cc5",{backgroundColor:"white"},"<")
+
+// 以下  症狀_改--------------------------------
+
+
+
+
+// 以上  症狀_改--------------------------------

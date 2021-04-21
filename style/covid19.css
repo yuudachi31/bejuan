@@ -1121,6 +1121,54 @@ z-index: 0;
   z-index: 15;
  
 }
+.symptoms_virus_all2{
+  display: flex;
+  
+
+    position: fixed;
+    top:100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  z-index: 15;
+ 
+}
+.sym_cir_all{
+    position: relative;
+display: flex;
+    width:60vh;
+    height: 60vh;
+    transition:5s;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto;
+
+}
+
+.Nsym_all{
+    position: absolute;
+    top:50%;
+    left: 50%;
+}
+.Nsym_c1{
+height: 100%;
+transform: translate(-50%,-50%);
+}
+.Nsym_c2{
+    height: 93%;
+    transform: translate(-50%,-50%);
+    }
+.Nsym_c3{
+    height: 88%;
+    transform: translate(-50%,-50%);
+    }
+.Nsym_c4{
+    height: 74%;
+     transform: translate(-50%,-50%);
+  }
+.sym_btn{
+    
+}
 .sym_z{
   
 }
@@ -1987,19 +2035,25 @@ transform: translate(-50%);
       position: absolute;
       top: 50%;
       left: 50%;
-      height: 30vh;
+      height: 27vh;
       
       transform: translate(-50% ,-50%);
     
       display: flex;
       flex-direction:column;
+      align-items: center;
       justify-content: space-around;
   }
   .circle_each{
-      height: 1.3vh;
-      width: 1.3vh;
+      height: 1.5vh;
+      width: 1.5vh;
       background-color: #fff;
       border-radius: 50%;
+      transition: width 0.2s,height 0.2s;
+      transition-timing-function: linear;
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
   }
   .fast_cont{
       position: absolute;
@@ -2045,7 +2099,15 @@ left: 50%;
 bottom: 0;
 transform: translate(-50% ,-5%);
   }
-
+.ffastt_1{
+    
+}
+.fast_t_all{
+    width: 0vh;
+    height: 4vh;
+ margin-right: 120%;
+ transition:width 0.5s;
+}
   .fast1_img{
       width: 60%;
       
