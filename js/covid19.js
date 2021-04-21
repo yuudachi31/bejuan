@@ -813,7 +813,7 @@ smallvirus_move3.to(".virus_small3",{x:"0vw",y:"10vw",duration:2});
      //pin:true,
       scrub:true,
       
-  markers:true,
+  // markers:true,
 onEnter:()=>{},
 onLeave:()=>{$('.smallv').fadeOut(300)},
 onEnterBack:()=>{$('.smallv').fadeIn(500)},
