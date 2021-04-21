@@ -501,7 +501,7 @@ let animals_anime_data = {
   loop: false,
   prerender: true,
   autoplay: false,
-  path: 'json/map3.json'
+  path: 'json/animals.json'
   //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
 };
 let animals_anime_Anim = bodymovin.loadAnimation(animals_anime_data);
@@ -854,10 +854,11 @@ onLeaveBack:()=>{}
   
   $(".sym_3").hover(function(){
     $('.man_tired').show();
-    $('.sym_3_l').show();s
+    $('.sym_3_l').show();
     $(".sym_3_text").css("visibility","visible");
     // $('.sym_2_text').show();
     $('.man_normal').hide();
+    console.log("22")
   },function(){
    $('.man_normal').show()
    $(".man_tired").hide();
@@ -934,7 +935,7 @@ onLeaveBack:()=>{}
     
   });
 
-  // symptom_y.to(".symptoms_virus_all",{y:"-440vh",ease:"none"});
+  symptom_y.to(".symptoms_virus_all",{y:"-440vh",ease:"none"});
   
 
   let symptomfinal = gsap.timeline({

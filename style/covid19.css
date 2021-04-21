@@ -1031,7 +1031,7 @@ z-index: 0;
 .prev_bg{
     position: fixed;
      /* background:linear-gradient(#01002A -30%,#2eceff 90%); */
-     background:linear-gradient(#01002A -30%,#069ecc 90%);
+     background:linear-gradient(#01002A -30%,#06175f 90%);
     height: 100vh;
     width: 100vw;
     top:0;
@@ -1397,7 +1397,7 @@ left:3vw;
 left:3vw;
 }
 .sym_texts_cont_bg{
-    background: -webkit-linear-gradient(#075991,#001C2B);
+    background: -webkit-linear (#075991,#001C2B);
     position: fixed;
     width: 100vw;
     height: 100vh;
