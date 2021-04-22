@@ -3,7 +3,9 @@ body{
     background-color: #000;
     height: 100vh;
   display: flex;
-  
+  align-items: center;
+  justify-content: center;
+ 
 }
 img{
     user-select: none;
@@ -25,18 +27,83 @@ overflow: hidden;
 margin:auto auto;
 max-width: 177.777vh;
 }
-
+.black_sq{
+    position: absolute;
+width: 100%;
+height: 200px;
+top: 98%;
+background-color: #000;
+left: 0;
+}
 .posa{
     position: absolute;
     
 }
-.bg{
-    position: fixed;
-width: 80vw;
-z-index: -1;
-max-height: 100vh;
-max-width: 177.777vh;
+.new_bg{
+    /* background-image: url(./img/n_main/n_home_bg.svg); */
+    position: relative;
+    width: 80vw;
+  height: 46vw;
+background-color: #000;
+    max-height: 98vh;
+    max-width:170vh ;
+    overflow: hidden;
+    
 }
+.bg{
+    
+   bottom: 0px;
+   left: 0px;
+
+width: 80vw;
+
+max-width:170vh ;
+
+}
+.dr{
+    width: 14%;
+    left: 54%;
+    bottom: 14%;
+}
+.stu{
+    width: 24%;
+    left: 5%;
+    bottom: -18%;
+}
+.umbr{
+    width: 7%;
+    left: 71%;
+    bottom: 15.4%
+}
+.man{
+    width: 8.5%;
+    left: 84%;
+    bottom: -22%
+}
+.virus{
+width: 3.8%;
+}
+.v1{
+left: 44%;
+top: 50%;
+}
+
+    .v2{
+ left: 86%;
+ top: 10%;
+ }
+.v3{
+left: 15%;
+top: 57%;
+}
+.v4{
+    left: 69%;
+    top: 74%;
+    }
+    .v5{
+        left: 90%;
+        top: 83%;
+        }  
 .screen_pos{
     position: relative;
     top:30%;
