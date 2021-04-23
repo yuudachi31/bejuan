@@ -501,7 +501,7 @@ let animals_anime_data = {
   loop: false,
   prerender: true,
   autoplay: false,
-  path: 'json/animals.json'
+  path: 'json/government.json'
   //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
 };
 let animals_anime_Anim = bodymovin.loadAnimation(animals_anime_data);
