@@ -259,8 +259,8 @@ let virus_scroll3 = gsap.timeline({
 // }
   } 
 });
-
-virus_scroll3.from(".big_virus",{x:"-23vw"});
+// virus_scroll3.from(".big_virus",{x:"-23vw"});
+virus_scroll3.to(".big_virus",{x:"0",duration:0.5});
 let flashBool = true;
 let virusFlash = anime({
   targets: '.big_virus',
@@ -379,6 +379,45 @@ let timeObj = {currentFrame: 0}
      }
  });  
  
+ 
+
+ let n_gov_cont = document.querySelector('#n_gov_cont');
+let n_gov_data = {
+  container: n_gov_cont,
+  animType: 'svg',
+  loop: false,
+  prerender: true,
+  autoplay: false,
+  path: 'json/gov3.json'
+  //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
+};
+let n_gov_Anim = bodymovin.loadAnimation(n_gov_data);
+let gov_timeObj = {currentFrame: 0}
+//  let endString = (obj.speed === "slow") ? "+=2000" : (obj.speed === "medium") ? "+=1000" : (obj.speed === undefined) ? "+=1250" : "+=500";
+ ScrollTrigger.create({
+   trigger:".prev_trigger15",
+     scrub: true,
+    start:"top center",
+     markers:true,
+    // markers:true,
+    //  end: endString, 
+     onUpdate: self => {
+     // console.log($(window).height()+"QQ")
+      //  console.log(self.progress) 
+      //self.progress可以看到scroll動畫的進度0~1
+      // if(obj.duration) {
+        getScrollTop()
+       gsap.to(gov_timeObj,0, {
+        
+        currentFrame:(Math.floor(self.progress *  (n_gov_Anim.totalFrames - 1))),
+        onUpdate: () => {
+          n_gov_Anim.goToAndStop(gov_timeObj.currentFrame, true)
+        },
+        ease: 'expo'
+       })
+    
+     }
+ });  
 //  let world_scroll1 = gsap.timeline({
 //   scrollTrigger:{
 //     trigger:".world_trigger1",
@@ -501,7 +540,7 @@ let animals_anime_data = {
   loop: false,
   prerender: true,
   autoplay: false,
-  path: 'json/government.json'
+  path: 'json/animals.json'
   //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
 };
 let animals_anime_Anim = bodymovin.loadAnimation(animals_anime_data);
@@ -1277,173 +1316,173 @@ $(this).css("top","100%");
   onLeaveBack:()=>{}
     } 
   });
-  prev_move2.to(".prevent_cont",{y:"-200vh"})
+   prev_move2.to(".prevent_cont",{y:"-200vh"})
 
-  let govanime1= gsap.timeline({
-    scrollTrigger:{
-      trigger:".prev_trigger3",
-      start:"top center",
-      end:"bottom center",
-      //  toggleActions:"restart none none reverse",
-     //pin:true,
-      scrub: true,
+//   let govanime1= gsap.timeline({
+//     scrollTrigger:{
+//       trigger:".prev_trigger3",
+//       start:"top center",
+//       end:"bottom center",
+//       //  toggleActions:"restart none none reverse",
+//      //pin:true,
+//       scrub: true,
       
- // markers:true,
-  onEnter:()=>{},
-  onLeave:()=>{},
-  onEnterBack:()=>{},
-  onLeaveBack:()=>{}
-    } 
-  });
-  govanime1.to(".line_cont",{width:"20%"})
+//  // markers:true,
+//   onEnter:()=>{},
+//   onLeave:()=>{},
+//   onEnterBack:()=>{},
+//   onLeaveBack:()=>{}
+//     } 
+//   });
+//   govanime1.to(".line_cont",{width:"20%"})
 
-  let govanime2= gsap.timeline({
-    scrollTrigger:{
-      trigger:".prev_trigger4",
-      start:"top center",
-      end:"bottom center",
-        toggleActions:"restart none none reverse",
-     //pin:true,
-    //  scrub: true,
+//   let govanime2= gsap.timeline({
+//     scrollTrigger:{
+//       trigger:".prev_trigger4",
+//       start:"top center",
+//       end:"bottom center",
+//         toggleActions:"restart none none reverse",
+//      //pin:true,
+//     //  scrub: true,
       
-//  markers:true,
-  onEnter:()=>{},
-  onLeave:()=>{},
-  onEnterBack:()=>{},
-  onLeaveBack:()=>{}
-    } 
-  });
-  govanime2.to(".gtc1",0.3,{height:"18vw"})
-  govanime2.to(".gtc1",0.3,{height:"15vw",width:"23%"})
+// //  markers:true,
+//   onEnter:()=>{},
+//   onLeave:()=>{},
+//   onEnterBack:()=>{},
+//   onLeaveBack:()=>{}
+//     } 
+//   });
+//   govanime2.to(".gtc1",0.3,{height:"18vw"})
+//   govanime2.to(".gtc1",0.3,{height:"15vw",width:"23%"})
 
-  let govanime3= gsap.timeline({
-    scrollTrigger:{
-      trigger:".prev_trigger5",
-      start:"top center",
-      end:"bottom center",
-      //  toggleActions:"restart none none reverse",
-     //pin:true,
-      scrub: true,
+//   let govanime3= gsap.timeline({
+//     scrollTrigger:{
+//       trigger:".prev_trigger5",
+//       start:"top center",
+//       end:"bottom center",
+//       //  toggleActions:"restart none none reverse",
+//      //pin:true,
+//       scrub: true,
       
-//  markers:true,
-  onEnter:()=>{},
-  onLeave:()=>{},
-  onEnterBack:()=>{},
-  onLeaveBack:()=>{}
-    } 
-  });
-  govanime3.to(".line_cont",{width:"40%"})
+// //  markers:true,
+//   onEnter:()=>{},
+//   onLeave:()=>{},
+//   onEnterBack:()=>{},
+//   onLeaveBack:()=>{}
+//     } 
+//   });
+//   govanime3.to(".line_cont",{width:"40%"})
   
-  let govanime4= gsap.timeline({
-    scrollTrigger:{
-      trigger:".prev_trigger6",
-      start:"top center",
-      end:"bottom center",
-        toggleActions:"restart none none reverse",
-     //pin:true,
-    //  scrub: true,
+//   let govanime4= gsap.timeline({
+//     scrollTrigger:{
+//       trigger:".prev_trigger6",
+//       start:"top center",
+//       end:"bottom center",
+//         toggleActions:"restart none none reverse",
+//      //pin:true,
+//     //  scrub: true,
       
-  //markers:true,
-  onEnter:()=>{},
-  onLeave:()=>{},
-  onEnterBack:()=>{},
-  onLeaveBack:()=>{}
-    } 
-  });
-  govanime4.to(".gtc2",0.3,{height:"23vw"})
-  govanime4.to(".gtc2",0.3,{height:"20vw",width:"28%"})
+//   //markers:true,
+//   onEnter:()=>{},
+//   onLeave:()=>{},
+//   onEnterBack:()=>{},
+//   onLeaveBack:()=>{}
+//     } 
+//   });
+//   govanime4.to(".gtc2",0.3,{height:"23vw"})
+//   govanime4.to(".gtc2",0.3,{height:"20vw",width:"28%"})
  
-  let govanime5= gsap.timeline({
-    scrollTrigger:{
-      trigger:".prev_trigger7",
-      start:"top center",
-      end:"bottom center",
-      //  toggleActions:"restart none none reverse",
-     //pin:true,
-      scrub: true,
+//   let govanime5= gsap.timeline({
+//     scrollTrigger:{
+//       trigger:".prev_trigger7",
+//       start:"top center",
+//       end:"bottom center",
+//       //  toggleActions:"restart none none reverse",
+//      //pin:true,
+//       scrub: true,
       
-  // markers:true,
-  onEnter:()=>{},
-  onLeave:()=>{},
-  onEnterBack:()=>{},
-  onLeaveBack:()=>{}
-    } 
-  });
-  govanime5.to(".line_cont",{width:"60%"})
+//   // markers:true,
+//   onEnter:()=>{},
+//   onLeave:()=>{},
+//   onEnterBack:()=>{},
+//   onLeaveBack:()=>{}
+//     } 
+//   });
+//   govanime5.to(".line_cont",{width:"60%"})
 
-  let govanime6= gsap.timeline({
-    scrollTrigger:{
-      trigger:".prev_trigger8",
-      start:"top center",
-      end:"bottom center",
-        toggleActions:"restart none none reverse",
-     //pin:true,
-    //  scrub: true,
+//   let govanime6= gsap.timeline({
+//     scrollTrigger:{
+//       trigger:".prev_trigger8",
+//       start:"top center",
+//       end:"bottom center",
+//         toggleActions:"restart none none reverse",
+//      //pin:true,
+//     //  scrub: true,
       
-  // markers:true,
-  onEnter:()=>{},
-  onLeave:()=>{},
-  onEnterBack:()=>{},
-  onLeaveBack:()=>{}
-    } 
-  });
-  govanime6.to(".gtc3",0.3,{height:"23vw"})
-  govanime6.to(".gtc3",0.3,{height:"19.6vw",width:"30%"})
+//   // markers:true,
+//   onEnter:()=>{},
+//   onLeave:()=>{},
+//   onEnterBack:()=>{},
+//   onLeaveBack:()=>{}
+//     } 
+//   });
+//   govanime6.to(".gtc3",0.3,{height:"23vw"})
+//   govanime6.to(".gtc3",0.3,{height:"19.6vw",width:"30%"})
 
-  let govanime7= gsap.timeline({
-    scrollTrigger:{
-      trigger:".prev_trigger9",
-      start:"top center",
-      end:"bottom center",
-      //  toggleActions:"restart none none reverse",
-     //pin:true,
-      scrub: true,
+//   let govanime7= gsap.timeline({
+//     scrollTrigger:{
+//       trigger:".prev_trigger9",
+//       start:"top center",
+//       end:"bottom center",
+//       //  toggleActions:"restart none none reverse",
+//      //pin:true,
+//       scrub: true,
       
-  // markers:true,
-  onEnter:()=>{},
-  onLeave:()=>{},
-  onEnterBack:()=>{},
-  onLeaveBack:()=>{}
-    } 
-  });
-  govanime7.to(".line_cont",{width:"80%"})
+//   // markers:true,
+//   onEnter:()=>{},
+//   onLeave:()=>{},
+//   onEnterBack:()=>{},
+//   onLeaveBack:()=>{}
+//     } 
+//   });
+//   govanime7.to(".line_cont",{width:"80%"})
 
-  let govanime8= gsap.timeline({
-    scrollTrigger:{
-      trigger:".prev_trigger10",
-      start:"top center",
-      end:"bottom center",
-        toggleActions:"restart none none reverse",
-     //pin:true,
-    //  scrub: true,
+//   let govanime8= gsap.timeline({
+//     scrollTrigger:{
+//       trigger:".prev_trigger10",
+//       start:"top center",
+//       end:"bottom center",
+//         toggleActions:"restart none none reverse",
+//      //pin:true,
+//     //  scrub: true,
       
-  // markers:true,
-  onEnter:()=>{},
-  onLeave:()=>{},
-  onEnterBack:()=>{},
-  onLeaveBack:()=>{}
-    } 
-  });
-  govanime8.to(".gtc4",0.3,{height:"17vw"})
-  govanime8.to(".gtc4",0.3,{height:"14vw",width:"20%"})
+//   // markers:true,
+//   onEnter:()=>{},
+//   onLeave:()=>{},
+//   onEnterBack:()=>{},
+//   onLeaveBack:()=>{}
+//     } 
+//   });
+//   govanime8.to(".gtc4",0.3,{height:"17vw"})
+//   govanime8.to(".gtc4",0.3,{height:"14vw",width:"20%"})
 
-  let govanime9= gsap.timeline({
-    scrollTrigger:{
-      trigger:".prev_trigger11",
-      start:"top center",
-      end:"bottom center",
-      //  toggleActions:"restart none none reverse",
-     //pin:true,
-      scrub: true,
+//   let govanime9= gsap.timeline({
+//     scrollTrigger:{
+//       trigger:".prev_trigger11",
+//       start:"top center",
+//       end:"bottom center",
+//       //  toggleActions:"restart none none reverse",
+//      //pin:true,
+//       scrub: true,
       
-  // markers:true,
-  onEnter:()=>{},
-  onLeave:()=>{},
-  onEnterBack:()=>{},
-  onLeaveBack:()=>{}
-    } 
-  });
-  govanime9.to(".line_cont",{width:"100%"})
+//   // markers:true,
+//   onEnter:()=>{},
+//   onLeave:()=>{},
+//   onEnterBack:()=>{},
+//   onLeaveBack:()=>{}
+//     } 
+//   });
+//   govanime9.to(".line_cont",{width:"100%"})
 
   let gov_out= gsap.timeline({
     scrollTrigger:{
@@ -1500,7 +1539,7 @@ $(this).css("top","100%");
     } 
   });
   show_f_doctor.to(".finaldoctor",0.3,{y:"-100vh"})
-  show_f_doctor.to(".finaldoctor",0.3,{opacity:0.7})
+  show_f_doctor.to(".finaldoctor",0.3,{opacity:1})
   // $(".sidebars").hover(function(){
   //   $(".fast_cont").css("right","0")
   //   $(".circles").fadeOut(500)

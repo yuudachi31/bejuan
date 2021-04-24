@@ -33,7 +33,7 @@ $('.screen').hover(
   
 anime({
     targets: [ '.v1','.v6','.v11'],
-    translateY: 13,
+    translateY: 10,
     easing: "linear",
     duration: 1000,
     direction: 'alternate',
@@ -44,7 +44,7 @@ anime({
   
   anime({
     targets: [ '.v2','.v7','.v12'],
-    translateY: 14,
+    translateY: 7,
     easing: "linear",
     duration: 1300,
     direction: 'alternate',
@@ -67,7 +67,7 @@ anime({
   
   anime({
     targets: [ '.v4','.v9'],
-    translateY: 14,
+    translateY: 9,
     easing: "linear",
     duration: 1200,
     direction: 'alternate',
@@ -79,7 +79,7 @@ anime({
   
   anime({
     targets:[ '.v5','.v10'],
-    translateY: 13,
+    translateY: 10,
     easing: "linear",
     duration: 1000,
     direction: 'alternate',

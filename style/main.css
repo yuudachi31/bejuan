@@ -80,6 +80,18 @@ max-width:170vh ;
     left: 84%;
     bottom: -22%
 }
+.door_light{
+    width: 40.8%;
+    left: 29.6%;
+    bottom: 16.5%
+}
+.intr{
+    height: 53%;
+ 
+    width: 30.8%;
+    left: 34.6%;
+    bottom: 23.5%
+}
 .virus{
 width: 3.1%;
 }
@@ -112,7 +124,7 @@ width: 2.5%;
   .v6{
         left: 52%;
         top: 58%;
-    width: 3.2%;    
+    width: 3%;    
     } 
  .v7{
         left: 54%;
