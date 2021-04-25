@@ -1,5 +1,5 @@
 $(function() {
-  window.setTimeout(( () => doorflash.play() ), 4000);
+  // window.setTimeout(( () => doorflash.play() ), 4000);
   
     $('.ivy_light').hide()
     $('.elvis_light').hide()
@@ -328,12 +328,157 @@ anime({
   
       $('.man_t1_all').hide();
   }) 
-  $('.dr').hover(
-    function(){
-      $('.dr_st1_all').hide();
-      $('.dr_t1_all').show();
-    },function(){
-        $('.dr_st1_all').show();
+  $('.dr_st1_all').hide()
+
+  let pppp=3
+  // $('.man').hover(
+  //   function(){
+  //     $('.step7 p').html(`dada+${pppp}`);
+     
+  //   },function(){
+       
+  // }) 
+ 
+  // $('.dr').hover(
+  //   function(){
+  //     $('.dr_st1_all').hide();
+  //     $('.dr_t1_all').show();
+  //   },function(){
+  //       $('.dr_st1_all').show();
   
-      $('.dr_t1_all').hide();
-  }) 
+  //     $('.dr_t1_all').hide();
+  // }) 
+  let right_num=0;
+  let wrong_num=0;
+  let step=2;
+  let allpass=false;
+  let nextstep=function(){
+    if(step==2){
+      $('.step2').hide();
+      $('.step3').show();
+    }else if(step==3){
+
+    }
+  };
+  $('.first_btn').click(
+    function(){
+      $('.step1').hide();
+      $('.step2').show();
+     console.log("aaaooo")
+    }
+  ) 
+  $('.first_btn').click(
+    function(){
+      $('.step1').hide();
+      $('.step2').show();
+  
+    }
+  ) 
+  $('.w').click(
+    function(){
+      $('.block').show();
+      $(this).css("background-color","rgba(216, 119, 119, 0.781)")
+      $(".as").css("background-color","rgba(20, 255, 137, 0.815)")
+      setTimeout((()=>{
+        $(this).css("background-color","")
+        $(".as").css("background-color","")
+        if(step==2){
+          $('.step2').hide();
+          $('.step3').show();
+          wrong_num+=1;
+          step+=1;
+        }else if(step==3){
+          $('.step3').hide();
+          $('.step4').show();
+          step+=1;
+          wrong_num+=1;
+        }
+        else if(step==4){
+          $('.step4').hide();
+          $('.step5').show();
+          step+=1;
+          wrong_num+=1;
+        }
+        else if(step==5){
+          $('.step5').hide();
+          $('.step6').show();
+          step+=1;
+          wrong_num+=1;
+        }
+        else if(step==6){
+          $('.step6').hide();
+          $('.step7').show();
+          step+=1;
+          wrong_num+=1;
+          $('.wrong_num').html(` ${wrong_num} `);
+          $('.right_num').html(` ${right_num} `);
+        }
+        $('.block').hide();
+      }), 2000)
+    }
+  )
+  $('.as').click(
+    function(){
+      $(this).css("background-color","rgba(20, 255, 137, 0.815)")
+      $('.block').show();
+      setTimeout((()=>{
+        $(this).css("background-color","")
+        $(".as").css("background-color","")
+        if(step==2){
+          $('.step2').hide();
+          $('.step3').show();
+          step+=1;
+          right_num+=1;
+        }else if(step==3){
+          $('.step3').hide();
+          $('.step4').show();
+          step+=1;
+          right_num+=1;
+        }
+        else if(step==4){
+          $('.step4').hide();
+          $('.step5').show();
+          step+=1;
+          right_num+=1;
+        }
+        else if(step==5){
+          $('.step5').hide();
+          $('.step6').show();
+          step+=1;
+          right_num+=1;
+        }
+        else if(step==6&&right_num<4){
+          $('.step6').hide();
+          $('.step7').show();
+          step+=1;
+          right_num+=1;
+          $('.wrong_num').html(` ${wrong_num} `);
+          $('.right_num').html(` ${right_num} `);
+        }else if(right_num=4){
+          // $('.step6').hide();
+          // $('.step8').show();
+          $('.question_cont').hide();
+          $('.virus').fadeOut(1500,function(){
+            $('.dr_t2_all').fadeIn(1000)
+          })
+        }
+        $('.block').hide();
+      }), 000)
+    }
+  )
+  $('.replay_btn').click(
+    function(){
+       right_num=0;
+       wrong_num=0;
+       step=2;
+       $('.step2').show();
+       $('.step7').hide();
+       $('.step8').hide();
+    })
+  // $( ".w" ).each(function( indexX ){
+  //   $(this).hover(function(){
+  //     $(this).css
+     
+  //    })
+      
+  //     })
