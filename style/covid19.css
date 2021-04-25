@@ -14,6 +14,15 @@ body{
     height: 100vh;
     
 }
+.exit{
+ position: fixed;
+    width: 6vw;
+    height: 6vw;
+    left:2vw ;
+    top: 2vw;
+  z-index: 19;
+  display: none;
+}
 .first_bg{
     position: absolute;
     background: -webkit-linear-gradient(#00060A,#001C2B);

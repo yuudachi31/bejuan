@@ -31,7 +31,41 @@ $('.screen').hover(
 
 }
 )
-  
+let mk1=0
+let mk2=0
+let mk3=0
+let mask1=anime({
+  targets:".facemask1",
+  translateY: [{value: -40, duration: 0},{value: 0, duration: 800}],
+ opacity:[{value: 1, duration: 300}],
+
+autoplay:false,
+ loop:false,
+});   
+let mask2=anime({
+  targets:".facemask2",
+  translateY: [{value: -40, duration: 0},{value: 0, duration: 800}],
+ opacity:[{value: 1, duration: 300}],
+
+autoplay:false,
+ loop:false,
+});
+let mask3=anime({
+  targets:".facemask3",
+  translateY: [{value: -40, duration: 0},{value: 0, duration: 800}],
+ opacity:[{value: 1, duration: 300}],
+
+autoplay:false,
+ loop:false,
+});   
+let mask4=anime({
+  targets:".facemask4",
+  translateY: [{value: -40, duration: 0},{value: 0, duration: 800}],
+ opacity:[{value: 1, duration: 300}],
+
+autoplay:false,
+ loop:false,
+});   
 anime({
     targets: [ '.v1','.v6','.v11'],
     translateY: 10,
@@ -313,6 +347,11 @@ anime({
       $('.stu_st2_all').hide();
       $('.stu_t1_all').show();
       $('.stu_t2_all').show();
+      if(mk1==0){  
+        mask1.play();
+      mask2.play();
+      mk1=1
+    }
     },function(){
         $('.stu_st1_all').show();
     $('.stu_st2_all').show();
@@ -323,6 +362,11 @@ anime({
     function(){
       $('.man_st1_all').hide();
       $('.man_t1_all').show();
+      if(mk2==0){  
+        mask4.play();
+      
+      mk2=1
+    }
     },function(){
         $('.man_st1_all').show();
   
@@ -339,15 +383,20 @@ anime({
        
   // }) 
  
-  // $('.dr').hover(
-  //   function(){
-  //     $('.dr_st1_all').hide();
-  //     $('.dr_t1_all').show();
-  //   },function(){
-  //       $('.dr_st1_all').show();
+  $('.dr').hover(
+    function(){
+      if(mk3==0){  
+        mask3.play();
+      
+      mk3=1
+    }
+      // $('.dr_st1_all').hide();
+      // $('.dr_t1_all').show();
+    },function(){
+      //   $('.dr_st1_all').show();
   
-  //     $('.dr_t1_all').hide();
-  // }) 
+      // $('.dr_t1_all').hide();
+  }) 
   let right_num=0;
   let wrong_num=0;
   let step=2;

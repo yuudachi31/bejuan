@@ -86,7 +86,7 @@ $(window).ready(function() {
         start:"top bottom",
        //pin:true,
         scrub:true,
-    //markers:true,
+    
     id:"abc"
       } 
      
@@ -138,7 +138,7 @@ $(window).ready(function() {
             start:"top bottom",
           // pin:true,
             scrub:true,
-      //  markers:true
+    
           } ,
           y:　lib_h
       
@@ -398,8 +398,7 @@ let gov_timeObj = {currentFrame: 0}
    trigger:".prev_trigger15",
      scrub: true,
     start:"top center",
-     markers:true,
-    // markers:true,
+     
     //  end: endString, 
      onUpdate: self => {
      // console.log($(window).height()+"QQ")
@@ -1531,8 +1530,8 @@ $(this).css("top","100%");
      //pin:true,
     //  scrub: true,
       
-  // markers:true,
-  onEnter:()=>{},
+  
+  onEnter:()=>{$('.exit').fadeIn(300)},
   onLeave:()=>{},
   onEnterBack:()=>{},
   onLeaveBack:()=>{}

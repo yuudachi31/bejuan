@@ -88,7 +88,42 @@ anime({
    loop:true,
  
   
-  });    
+  });
+  let mk1=0
+  let mk2=0
+  let mk3=0
+  let mask1=anime({
+    targets:".facemask1",
+    translateY: [{value: -40, duration: 0},{value: 0, duration: 800}],
+   opacity:[{value: 1, duration: 300}],
+
+  autoplay:false,
+   loop:false,
+  });   
+  let mask2=anime({
+    targets:".facemask2",
+    translateY: [{value: -40, duration: 0},{value: 0, duration: 800}],
+   opacity:[{value: 1, duration: 300}],
+
+  autoplay:false,
+   loop:false,
+  });
+  let mask3=anime({
+    targets:".facemask3",
+    translateY: [{value: -40, duration: 0},{value: 0, duration: 800}],
+   opacity:[{value: 1, duration: 300}],
+
+  autoplay:false,
+   loop:false,
+  });   
+  let mask4=anime({
+    targets:".facemask4",
+    translateY: [{value: -40, duration: 0},{value: 0, duration: 800}],
+   opacity:[{value: 1, duration: 300}],
+
+  autoplay:false,
+   loop:false,
+  });   
   let value1=-5;
   let value2=10;
   let virus1d = anime({
@@ -313,6 +348,12 @@ anime({
       $('.stu_st2_all').hide();
       $('.stu_t1_all').show();
       $('.stu_t2_all').show();
+      if(mk1==0){  
+        mask1.play();
+      mask2.play();
+      mk1=1
+    }
+    
     },function(){
         $('.stu_st1_all').show();
     $('.stu_st2_all').show();
@@ -323,6 +364,12 @@ anime({
     function(){
       $('.man_st1_all').hide();
       $('.man_t1_all').show();
+      if(mk2==0){  
+        mask4.play();
+      
+      mk2=1
+    }
+    
     },function(){
         $('.man_st1_all').show();
   
@@ -332,6 +379,11 @@ anime({
     function(){
       $('.dr_st1_all').hide();
       $('.dr_t1_all').show();
+      if(mk3==0){  
+        mask3.play();
+      
+      mk3=1
+    }
     },function(){
         $('.dr_st1_all').show();
   

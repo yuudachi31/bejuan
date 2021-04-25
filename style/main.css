@@ -282,6 +282,30 @@ display: flex;
 justify-content: space-between;
 width: 50%;
 }
+.facemask1{
+    width: 3.1vw;
+    left: 21.2%;
+    top: 68.5%;
+    opacity: 0;
+}
+.facemask2{
+    width: 3.1vw;
+    left: 7.7%;
+    top: 68.3%;
+    opacity: 0;
+}
+.facemask3{
+    width: 2.3vw;
+    left: 61.3%;
+    top: 38.97%;
+    opacity: 0;
+}
+.facemask4{
+    width: 2.86vw;
+    left: 84.77%;
+    top: 65.8%;
+    opacity: 0;
+}
 
 
 
