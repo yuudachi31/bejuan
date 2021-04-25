@@ -463,7 +463,7 @@ anime({
           })
         }
         $('.block').hide();
-      }), 000)
+      }), 2000)
     }
   )
   $('.replay_btn').click(
