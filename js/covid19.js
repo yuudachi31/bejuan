@@ -15,6 +15,7 @@ let v_ani1=gsap.timeline()
 v_ani1.to(".light_3",{opacity:1,duration:0},"<")
 v_ani1.to(".light_1",{opacity:1,duration:0},"<")
 v_ani1.to(".big_virus",{opacity:1,duration:0},"<")
+v_ani1.to(".mouselottie",{opacity:1,duration:0},"<")
 
 }
 }
@@ -44,9 +45,25 @@ $(window).ready(function() {
    v_ani2.to(".light_1",{opacity:1,duration:0},"<")
    v_ani2.to(".big_virus",{opacity:1,duration:0},"<")
    v_ani2.to(".big_virus",{x:0,duration:0},"<")
+   v_ani2.to(".mouselottie",{opacity:1,duration:0},"<")
    }
    }
   Loadtop();
+  let mouselottie_cont = document.querySelector('#mouselottie');
+let mouse_lottie_data = {
+  container: mouselottie_cont,
+  animType: 'svg',
+  loop: true,
+  prerender: true,
+  autoplay: true,
+  path: 'json/MOUSE.json'
+  //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
+};
+let mouse_Anim = bodymovin.loadAnimation(mouse_lottie_data);
+
+//  let endString = (obj.speed === "slow") ? "+=2000" : (obj.speed === "medium") ? "+=1000" : (obj.speed === undefined) ? "+=1250" : "+=500";
+ 
+ 
     //   $("html, body").animate({
     //     scrollTop: 0
     // });
@@ -183,6 +200,7 @@ function getScrollTop(){
   proAnime.from(".light_1",{opacity:0,duration:1.5},"-=1.5")
   
   proAnime.from(".big_virus",{y:20,opacity:0,duration:3,onComplete:function(){ document.documentElement.style.overflowY = 'scroll';
+  $('.mouselottie').fadeIn(1000);
   document.documentElement.style.overflowX = 'hidden'; 
 }},"-=1.5")
   
