@@ -130,21 +130,74 @@ width: 100vw;
 }
 .big_virus{
     width: 18.5vw;
- left: 50%;
+ left: 41%;
+ 
  -webkit-filter: blur(0px);
- -ms-transform:translate(-50%,0%);
- -webkit-transform:translate(-50%,0%);
- transform:translate(-50%,0%);
+
+
+
    position: absolute;
    /* w/h=1.158 */
  
    height: 16vw;
-   bottom: 17vw;
+   bottom: 35%;
    
    
 }
-
-
+ @media all and (-ms-high-contrast:none)
+     {
+        .big_virus{
+            width: 18.5vw;
+         left: 60%;
+         
+         -webkit-filter: blur(0px);
+         filter: blur(0px);
+         -ms-transform:translate(-50%,0%);
+         transform:translate(-50%,0%);
+           position: absolute;
+           /* w/h=1.158 */
+         
+           height: 16vw;
+           bottom: 17vw;
+           
+           
+        } /* IE10 */
+     *::-ms-backdrop, .big_virus{
+        width: 18.5vw;
+     left: 60%;
+     
+     -webkit-filter: blur(0px);
+     filter: blur(0px);
+     -ms-transform:translate(-50%,0%);
+     transform:translate(-50%,0%);
+       position: absolute;
+       /* w/h=1.158 */
+     
+       height: 16vw;
+       bottom: 17vw;
+       
+       
+    } /* IE11 */
+     }
+     @supports (-ms-ime-align:auto) {
+        .big_virus{
+            width: 18.5vw;
+         left: 60%;
+         
+         -webkit-filter: blur(0px);
+         filter: blur(0px);
+         -ms-transform:translate(-50%,0%);
+         transform:translate(-50%,0%);
+           position: absolute;
+           /* w/h=1.158 */
+         
+           height: 16vw;
+           bottom: 17vw;
+           
+           
+        }
+      }
+     
 .lib_trigger{
     height: 1200px;
     width: 300px;
