@@ -15,7 +15,7 @@ let v_ani1=gsap.timeline()
 v_ani1.to(".light_3",{opacity:1,duration:0},"<")
 v_ani1.to(".light_1",{opacity:1,duration:0},"<")
 v_ani1.to(".big_virus",{opacity:1,duration:0},"<")
-v_ani1.to(".mouselottie",{opacity:1,duration:0},"<")
+v_ani1.to(".mouselottie",{opacity:1,duration:0},"2")
 
 }
 }
@@ -1619,7 +1619,7 @@ $(this).css("top","100%");
  
     } 
   });
-  change_color1.to(".cc1",{backgroundColor:"orange"})
+  change_color1.to(".cc1",{backgroundColor:"#EDEA48"})
   change_color1.to(".cc2",{backgroundColor:"white"},"<")
   change_color1.to(".cc3",{backgroundColor:"white"},"<")
   change_color1.to(".cc4",{backgroundColor:"white"},"<")
@@ -1638,7 +1638,7 @@ $(this).css("top","100%");
     } 
   });
   change_color2.to(".cc1",{backgroundColor:"white"})
-  change_color2.to(".cc2",{backgroundColor:"orange"},"<")
+  change_color2.to(".cc2",{backgroundColor:"#EDEA48"},"<")
   change_color2.to(".cc3",{backgroundColor:"white"},"<")
   change_color2.to(".cc4",{backgroundColor:"white"},"<")
   change_color2.to(".cc5",{backgroundColor:"white"},"<")
@@ -1656,7 +1656,7 @@ $(this).css("top","100%");
     } 
   });
   change_color3.to(".cc1",{backgroundColor:"white"})
-  change_color3.to(".cc3",{backgroundColor:"orange"},"<")
+  change_color3.to(".cc3",{backgroundColor:"#EDEA48"},"<")
   change_color3.to(".cc2",{backgroundColor:"white"},"<")
   change_color3.to(".cc4",{backgroundColor:"white"},"<")
   change_color3.to(".cc5",{backgroundColor:"white"},"<")
@@ -1674,7 +1674,7 @@ $(this).css("top","100%");
     } 
   });
   change_color4.to(".cc1",{backgroundColor:"white"})
-  change_color4.to(".cc4",{backgroundColor:"orange"},"<")
+  change_color4.to(".cc4",{backgroundColor:"#EDEA48"},"<")
   change_color4.to(".cc2",{backgroundColor:"white"},"<")
   change_color4.to(".cc3",{backgroundColor:"white"},"<")
   change_color4.to(".cc5",{backgroundColor:"white"},"<")
@@ -1692,7 +1692,7 @@ $(this).css("top","100%");
     } 
   });
   change_color5.to(".cc1",{backgroundColor:"white"})
-  change_color5.to(".cc5",{backgroundColor:"orange"},"<")
+  change_color5.to(".cc5",{backgroundColor:"#EDEA48"},"<")
   change_color5.to(".cc2",{backgroundColor:"white"},"<")
   change_color5.to(".cc3",{backgroundColor:"white"},"<")
   change_color5.to(".cc4",{backgroundColor:"white"},"<")
@@ -1710,7 +1710,7 @@ $(this).css("top","100%");
     } 
   });
   change_color6.to(".cc1",{backgroundColor:"white"})
-  change_color6.to(".cc6",{backgroundColor:"orange"},"<")
+  change_color6.to(".cc6",{backgroundColor:"#EDEA48"},"<")
   change_color6.to(".cc2",{backgroundColor:"white"},"<")
   change_color6.to(".cc3",{backgroundColor:"white"},"<")
   change_color6.to(".cc4",{backgroundColor:"white"},"<")
