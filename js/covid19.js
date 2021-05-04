@@ -314,12 +314,12 @@ ScrollTrigger.create({
 //   onUpdate:applyBlur});
 
 //here you pass the filter to the DOM element
-function applyBlur()
-{
-    TweenMax.set(['.big_virus'], {
-      webkitFilter:"blur(" + blurElement.a + "px)",
-      filter:"blur(" + blurElement.a + "px)"});  
-};
+// function applyBlur()
+// {
+//     TweenMax.set(['.big_virus'], {
+//       webkitFilter:"blur(" + blurElement.a + "px)",
+//       filter:"blur(" + blurElement.a + "px)"});  
+// };
 
 // gsap.to(blurElement,{
 //   scrollTrigger:{
@@ -353,10 +353,10 @@ function applyBlur()
   },
     } 
   });
-  virus_boom.to(".big_virus",{scale:4,opacity:0,duration:1});
- virus_boom.to(blurElement,0.5,{ onUpdate: self => {
-  applyBlur()
-},a:20},"<")
+  virus_boom.to(".big_virus",{scale:4,opacity:0,duration:0.5});
+//  virus_boom.to(blurElement,0.5,{ onUpdate: self => {
+//   // applyBlur()
+// },a:20},"<")
 
 
 let maplottie_cont = document.querySelector('#maplottie');
