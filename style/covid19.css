@@ -1215,38 +1215,99 @@ z-index: 0;
  
 }
 .sym_cir_all{
-    position: relative;
+    position: absolute;
 display: flex;
     width:60vh;
     height: 60vh;
     transition:5s;
     align-items: center;
     justify-content: center;
-    margin: auto auto;
+    /* margin: auto auto; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 
 }
-
+ .sym_btn_all{
+     position: absolute;
+     top: 50%;
+     left: 10%;
+     transform: translate(0,-50%);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+.syn_btns{
+display: flex;
+flex-direction: column;
+margin-top: 30px;
+}
+.sym_btn_top1{
+width: 14vw;
+}
+.nsym_btn_each{
+width:9vw;
+margin-top: 11px;
+opacity: 0.5;
+}
 .Nsym_all{
     position: absolute;
-    top:50%;
-    left: 50%;
+    /* top:50%;
+    left: 50%; */
 }
 .Nsym_c1{
 height: 100%;
-transform: translate(-50%,-50%);
+/* transform: translate(-50%,-50%); */
 }
 .Nsym_c2{
     height: 93%;
-    transform: translate(-50%,-50%);
+    /* transform: translate(-50%,-50%); */
     }
 .Nsym_c3{
     height: 88%;
-    transform: translate(-50%,-50%);
+    /* transform: translate(-50%,-50%); */
     }
 .Nsym_c4{
     height: 74%;
-     transform: translate(-50%,-50%);
+     /* transform: translate(-50%,-50%); */
   }
+.nsym_info_all{
+    position: absolute;
+    right: 10%;
+    width: 15vw;
+    height: 80vh;
+  
+    top: 50%;
+    transform: translate(0,-50%);
+}
+.nsym_info_each{
+    position: absolute;
+    width: 1.2vw;
+   height: 1vw;
+display: none;
+  
+}
+.nsym_info0{
+    top: 15%;
+}
+.nsym_info1{
+    top: 24%;
+}
+.nsym_info2{
+    top: 32%;
+}
+.nsym_info3{
+    top: 40%;
+}
+.nsym_info4{
+    top: 46%;
+}
+.nsym_info5{
+    top: 52%;
+}
+.nsym_info6{
+   top: 60%;
+}
 .sym_btn{
     
 }
@@ -2120,6 +2181,7 @@ transform: translate(-50%);
       height: 100vh;
       width: 7vw;
       /* background-color: #fff; */
+      display: none;
   }
   .circles{
       position: absolute;

@@ -200,6 +200,7 @@ function getScrollTop(){
   proAnime.from(".light_1",{opacity:0,duration:1.5},"-=1.5")
   
   proAnime.from(".big_virus",{y:20,opacity:0,duration:3,onComplete:function(){ document.documentElement.style.overflowY = 'scroll';
+  $('.sidebars').show();
   $('.mouselottie').fadeIn(1000);
   document.documentElement.style.overflowX = 'hidden'; 
 }},"-=1.5")
@@ -1298,6 +1299,176 @@ $(this).css("top","100%");
 }
  )
   })
+
+ let info_hide0=()=>{
+  $('.nsym_info0').hide()
+ }
+ let info_hide1=()=>{
+  $('.nsym_info1').hide()
+ }
+ let info_hide2=()=>{
+  $('.nsym_info2').hide()
+ }
+ let info_hide3=()=>{
+  $('.nsym_info3').hide()
+ }
+ let info_hide4=()=>{
+  $('.nsym_info4').hide()
+ }
+ let info_hide5=()=>{
+  $('.nsym_info5').hide()
+ }
+ let info_hide6=()=>{
+  $('.nsym_info6').hide()
+ }
+
+  let nsym_info_0 = gsap.timeline({ 
+  
+    onReverseComplete: info_hide0,
+    
+  });
+  let nsym_info_1 = gsap.timeline({ 
+    onReverseComplete: info_hide1
+  });
+  let nsym_info_2 = gsap.timeline({ 
+    onReverseComplete: info_hide2
+  });
+  let nsym_info_3 = gsap.timeline({ 
+    onReverseComplete: info_hide3
+  });
+  let nsym_info_4 = gsap.timeline({ 
+    onReverseComplete: info_hide4
+  });
+  let nsym_info_5 = gsap.timeline({ 
+    onReverseComplete: info_hide5
+  });
+  let nsym_info_6 = gsap.timeline({ 
+    onReverseComplete: info_hide6
+  });
+  $( ".nsym_btn_each" ).each(function( indexX ){
+
+    if(indexX==0){
+    $(this).hover(function(){
+      $(".nsym_info"+indexX).show();
+      nsym_info_0.restart();
+      nsym_info_0.to(".nsym_info"+indexX,{ scaleX:10,duration:0.3});
+      nsym_info_0.to(".nsym_info"+indexX,{ scaleY:10,duration:0.3})
+    },
+    function(){
+      nsym_info_0.reverse();
+    }
+     )
+  }
+  if(indexX==1){
+    $(this).hover(function(){
+      $(".nsym_info"+indexX).show();
+      nsym_info_1.restart();
+      nsym_info_1.to(".nsym_info"+indexX,{ scaleX:10,duration:0.3});
+      nsym_info_1.to(".nsym_info"+indexX,{ scaleY:10,duration:0.3})
+    },
+    function(){
+      nsym_info_1.reverse();
+    }
+     )
+  }
+  if(indexX==2){
+    $(this).hover(function(){
+      $(".nsym_info"+indexX).show();
+      nsym_info_2.restart();
+      nsym_info_2.to(".nsym_info"+indexX,{ scaleX:10,duration:0.3});
+      nsym_info_2.to(".nsym_info"+indexX,{ scaleY:10,duration:0.3})
+    },
+    function(){
+      nsym_info_2.reverse();
+    }
+     )
+  }
+  if(indexX==3){
+    $(this).hover(function(){
+      $(".nsym_info"+indexX).show();
+      nsym_info_3.restart();
+      nsym_info_3.to(".nsym_info"+indexX,{ scaleX:10,duration:0.3});
+      nsym_info_3.to(".nsym_info"+indexX,{ scaleY:10,duration:0.3})
+    },
+    function(){
+      nsym_info_3.reverse();
+    }
+     )
+  }
+  if(indexX==4){
+    $(this).hover(function(){
+      $(".nsym_info"+indexX).show();
+      nsym_info_4.restart();
+      nsym_info_4.to(".nsym_info"+indexX,{ scaleX:10,duration:0.3});
+      nsym_info_4.to(".nsym_info"+indexX,{ scaleY:10,duration:0.3})
+    },
+    function(){
+      nsym_info_4.reverse();
+    }
+     )
+  }
+  if(indexX==5){
+    $(this).hover(function(){
+      $(".nsym_info"+indexX).show();
+      nsym_info_5.restart();
+      nsym_info_5.to(".nsym_info"+indexX,{ scaleX:10,duration:0.3});
+      nsym_info_5.to(".nsym_info"+indexX,{ scaleY:10,duration:0.3})
+    },
+    function(){
+      nsym_info_5.reverse();
+    }
+     )
+  }
+  if(indexX==6){
+    $(this).hover(function(){
+      $(".nsym_info"+indexX).show();
+      nsym_info_6.restart();
+      nsym_info_6.to(".nsym_info"+indexX,{ scaleX:10,duration:0.3});
+      nsym_info_6.to(".nsym_info"+indexX,{ scaleY:10,duration:0.3})
+    },
+    function(){
+      nsym_info_6.reverse();
+    }
+     )
+  }
+  })
+  let nsym_c1_anime = anime({
+    targets: '.Nsym_c1',
+    // opacity:[{value: 0.5, duration: 200},{value: 1, duration: 200}],
+rotateZ:{
+  value: 360,
+  duration: 3000,
+  easing: 'linear'
+},
+  autoplay:true,
+   loop:true,
+
+  //  complete: function() {
+  //    if(flashBool===true){
+  //     virusFlash.play();
+  //    }
+  //  }
+  }); 
+//   let nsym_c2_anime = anime({
+//     targets: '.Nsym_c3',
+//     // opacity:[{value: 0.5, duration: 200},{value: 1, duration: 200}],
+// rotateZ:{
+//   value: -360,
+//   duration: 10000,
+//   easing: 'linear'
+// },
+//   autoplay:true,
+//    loop:true,
+
+//   //  complete: function() {
+//   //    if(flashBool===true){
+//   //     virusFlash.play();
+//   //    }
+//   //  }
+//   }); 
+   
+
+
 
   let prev_move = gsap.timeline({
   
