@@ -1299,6 +1299,31 @@ $(this).css("top","100%");
 }
  )
   })
+  // $( ".nsym_btn_each" ).each(function( indexX ){
+  //   $(this).hover(function(){
+  //     $(this).css("opacity","1");
+  //     $( ".shad" ).each(function( indexY ){
+  //    if(indexX===indexY){
+  //   $(this).css("top","0");
+    
+  //    }
+  //     })
+  //   },
+  //   function(){
+      
+  //     $( ".shad" ).each(function( indexY ){
+  //    if(indexX===indexY){
+  //   $(this).css("top","100%");
+    
+  //    }
+  //     })
+  //   }
+  //    )
+  //     })
+    
+
+
+
 
  let info_hide0=()=>{
   $('.nsym_info0').hide()
@@ -1346,7 +1371,31 @@ $(this).css("top","100%");
     onReverseComplete: info_hide6
   });
   $( ".nsym_btn_each" ).each(function( indexX ){
+    $(this).hover(function(){
+      $(this).css("opacity","1")
 
+      $( ".man_other" ).each(function( indexY ){
+        if(indexX===indexY){
+       $(this).show();
+       $('.man_normal').hide();
+       
+        }
+         })
+    },function(){
+
+      $( ".man_other" ).each(function( indexY ){
+        if(indexX===indexY){
+       $(this).hide();
+       $('.man_normal').show();
+       
+        }
+         })
+    }
+    
+    
+    
+    )
+    
     if(indexX==0){
     $(this).hover(function(){
       $(".nsym_info"+indexX).show();
@@ -1449,6 +1498,23 @@ rotateZ:{
   //    }
   //  }
   }); 
+  let nsym_c3_anime = anime({
+    targets: '.Nsym_c3',
+    // opacity:[{value: 0.5, duration: 200},{value: 1, duration: 200}],
+rotateZ:{
+  value: -360,
+  duration: 25000,
+  easing: 'linear'
+},
+  autoplay:false,
+   loop:true,
+
+  //  complete: function() {
+  //    if(flashBool===true){
+  //     virusFlash.play();
+  //    }
+  //  }
+  }); 
 //   let nsym_c2_anime = anime({
 //     targets: '.Nsym_c3',
 //     // opacity:[{value: 0.5, duration: 200},{value: 1, duration: 200}],
@@ -1466,7 +1532,38 @@ rotateZ:{
 //   //    }
 //   //  }
 //   }); 
-   
+let nsym_c3_play=function(){
+  nsym_c3_anime.restart();
+  $(".sym_btn_all").fadeIn(1000)
+} 
+let nsym_scrollAnime= gsap.timeline({
+  onComplete:nsym_c3_play,
+  scrollTrigger:{
+    trigger:".symp_trigger5",
+    start:"top center",
+    end:"bottom center",
+    onLeaveBack:()=>{nsym_c3_anime.pause();
+      $('.sym_cir_all').fadeOut();
+      $(".sym_btn_all").fadeOut()
+    },
+    onEnter:()=>{
+      $('.sym_cir_all').show();
+    },
+   //pin:true,
+  //  scrub:true,
+ markers:true,
+onLeave:()=>{
+
+},
+// toggleActions:"restart none none reverse "
+toggleActions:"restart none none none "
+} 
+});
+nsym_scrollAnime.from(".Nsym_c2",{scaleX:0, scaleY:0,duration:1.3,ease:"easeInOut"});
+nsym_scrollAnime.from(".Nsym_c3",{scaleX:0, scaleY:0,duration:1.3,ease:"easeInOut"},"-=0.7");
+nsym_scrollAnime.from(".Nsym_c4",{scaleX:0, scaleY:0,duration:1.3,},"-=1.0");
+nsym_scrollAnime.to(".Nsym_c1",{opacity:1,duration:0.7,},"+=0.5");
+
 
 
 

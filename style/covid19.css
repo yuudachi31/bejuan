@@ -860,7 +860,16 @@ z-index: 0;
     /* height:120vh; */
     height: 4700px;
     background-color: rgb(65, 170, 33);
-    width: 100px;
+    width: 50px;
+    position: relative;
+    
+}
+.symp_trigger5{
+    top:2950px;
+    /* height:120vh; */
+    height: 4700px;
+    background-color: rgb(65, 170, 33);
+    width: 50px;
     position: relative;
     
 }
@@ -1217,8 +1226,8 @@ z-index: 0;
 .sym_cir_all{
     position: absolute;
 display: flex;
-    width:60vh;
-    height: 60vh;
+    width:68vh;
+    height: 68vh;
     transition:5s;
     align-items: center;
     justify-content: center;
@@ -1236,6 +1245,7 @@ display: flex;
      display: flex;
      flex-direction: column;
      align-items: center;
+     display: none;
  }
 .syn_btns{
 display: flex;
@@ -1257,6 +1267,7 @@ opacity: 0.5;
 }
 .Nsym_c1{
 height: 100%;
+opacity: 0;
 /* transform: translate(-50%,-50%); */
 }
 .Nsym_c2{
