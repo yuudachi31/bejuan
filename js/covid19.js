@@ -1151,7 +1151,7 @@ function dropped1(e){
   e.target.appendChild(document.querySelector(`#${id}`))
   $('.p1_ff').fadeOut(2000);
     p1ok=true;
-    $(".p1_light").css("opacity","0")
+    $(".puzzle_light_1").css("opacity","0")
   $(".p1_shade").css("opacity","0")
   puzzleRotate()
   }
@@ -1163,7 +1163,7 @@ function dropped2(e){
   e.target.appendChild(document.querySelector(`#${id}`))
   $('.p2_ff').fadeOut(2000);
   p2ok=true;
-  $(".p2_light").css("opacity","0")
+  $(".puzzle_light_2").css("opacity","0")
   $(".p2_shade").css("opacity","0")
   puzzleRotate()
   }
@@ -1175,7 +1175,7 @@ function dropped3(e){
   e.target.appendChild(document.querySelector(`#${id}`))
   $('.p3_ff').fadeOut(2000);
   p3ok=true;
-  $(".p3_light").css("opacity","0")
+  $(".puzzle_light_3").css("opacity","0")
   $(".p3_shade").css("opacity","0")
   puzzleRotate()
   }
@@ -1187,7 +1187,7 @@ function dropped4(e){
   e.target.appendChild(document.querySelector(`#${id}`))
   $('.p4_ff').fadeOut(2000);
   p4ok=true;
-  $(".p4_light").css("opacity","0")
+  $(".puzzle_light_4").css("opacity","0")
   $(".p4_shade").css("opacity","0")
   puzzleRotate()
   }
@@ -1210,13 +1210,13 @@ $(".p1_ept").hover(function(){
 });
 $("#p1_f").hover(function(){
   if(p1ok===false){
-  $(".p1_light").css("opacity","1")
+  $(".puzzle_light_1").css("opacity","1")
   $(".p1_shade").css("opacity","1")
   $(".p1_text").css("opacity","1")
 }
 
 },function(){
-  $(".p1_light").css("opacity","0")
+  $(".puzzle_light_1").css("opacity","0")
   $(".p1_shade").css("opacity","0")
   $(".p1_text").css("opacity","0")
  
@@ -1224,36 +1224,36 @@ $("#p1_f").hover(function(){
 
 $("#p2_f").hover(function(){
   if(p2ok===false){
-  $(".p2_light").css("opacity","1")
+  $(".puzzle_light_2").css("opacity","1")
   $(".p2_shade").css("opacity","1")
   $(".p2_text").css("opacity","1")
 }
 },function(){
-  $(".p2_light").css("opacity","0")
+  $(".puzzle_light_2").css("opacity","0")
   $(".p2_shade").css("opacity","0")
   $(".p2_text").css("opacity","0")
 });
 
 $("#p3_f").hover(function(){
   if(p3ok===false){
-  $(".p3_light").css("opacity","1")
+  $(".puzzle_light_3").css("opacity","1")
   $(".p3_shade").css("opacity","1")
   $(".p3_text").css("opacity","1")
 }
 },function(){
-  $(".p3_light").css("opacity","0")
+  $(".puzzle_light_3").css("opacity","0")
   $(".p3_shade").css("opacity","0")
   $(".p3_text").css("opacity","0")
 });
 
 $("#p4_f").hover(function(){
   if(p4ok===false){
-  $(".p4_light").css("opacity","1")
+  $(".puzzle_light_4").css("opacity","1")
   $(".p4_shade").css("opacity","1")
   $(".p4_text").css("opacity","1")
 }
 },function(){
-  $(".p4_light").css("opacity","0")
+  $(".puzzle_light_4").css("opacity","0")
   $(".p4_shade").css("opacity","0")
   $(".p4_text").css("opacity","0")
 });
@@ -1573,7 +1573,7 @@ let nsym_scrollAnime= gsap.timeline({
     },
    //pin:true,
   //  scrub:true,
- markers:true,
+ //markers:true,
 onLeave:()=>{
 
 },

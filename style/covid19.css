@@ -1673,11 +1673,11 @@ width: 60vw;
     /* z-index: 8; */
 }
 .puzzle_merge{
-    width: 25vw;
+    width: 28.3vw;
     position: absolute;
     top:50%;
     left: 50%;
-    transform: translate(-50%,-56%);
+    transform: translate(-50%,-52.5%);
    
 
 }
@@ -1770,6 +1770,14 @@ width: 60vw;
     left:50%;
     transform: translate(-50%,-50%);
 }
+.p1_f2{
+   
+    width: 120%;
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+  }
 .p1_ff{
     opacity: 1;
 }
@@ -1790,6 +1798,7 @@ width: 60vw;
       left:50%;
       transform: translate(-50%,-50%);
   }
+  
   .p3_f{
    
     width:75%;
@@ -1850,6 +1859,18 @@ width: 60vw;
     transform: translate(-40%,0%);
     opacity: 0;
 }
+.puzzle_light_1{
+    opacity: 0;
+}
+.puzzle_light_2{
+    opacity: 0;
+}
+.puzzle_light_3{
+    opacity: 0;
+}
+.puzzle_light_4{
+    opacity: 0;
+}
 .p1_ept_c{
     /* background-image:url(../img/covid19/puzzle_1_ept.png) ; */
     height:15vw;
@@ -1864,8 +1885,8 @@ width: 60vw;
     height:15vw;
     width:15vw;
     position: absolute;
-    top:9.3%;
-    left:43%;
+    top:9.35%;
+    left:44%;
     /* background-color: rgb(35, 216, 35); */
 }
 .p3_ept_c{
@@ -1873,8 +1894,8 @@ width: 60vw;
     height:15vw;
     width:15vw;
     position: absolute;
-    top:39.3%;
-    left:9.5%;
+    top:40.3%;
+    left:9.38%;
     /* background-color: rgb(35, 216, 35); */
 }
 .p4_ept_c{
@@ -1882,8 +1903,8 @@ width: 60vw;
     height:15vw;
     width:15vw;
     position: absolute;
-    top:39.5%;
-    left:39.68%;
+    top:40.3%;
+    left:40.7%;
     /* background-color: rgb(35, 216, 35); */
 }
 .p_t_c{
