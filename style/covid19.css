@@ -882,6 +882,15 @@ z-index: 0;
     position: relative;
     
 }
+.symp_trigger6{
+    top:6450px;
+    /* height:120vh; */
+    height: 1200px;
+    background-color: rgb(66, 139, 44);
+    width: 100px;
+    position: relative;
+    
+}
 .symp_trigger4{
     top:10150px;
     /* height:120vh; */

@@ -56,7 +56,9 @@ let mouse_lottie_data = {
   loop: true,
   prerender: true,
   autoplay: true,
-  path: 'json/MOUSE.json'
+   path: 'json/MOUSE.json'
+  // path: 'json/puzzle_prompt.json'
+  // path: 'json/scrolll.json'
   //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
 };
 let mouse_Anim = bodymovin.loadAnimation(mouse_lottie_data);
@@ -1013,7 +1015,27 @@ onLeaveBack:()=>{}
   });
   symptomfinal.to(".symout",{opacity:0.5,duration:0.5})
   symptomfinal.to(".sym_text_2",{y:"-90vh",ease:"none"});
+
   symptomfinal.to(".symtTextAndManMove",{y:"-=230vh",ease:"none",duration:2});
+
+  let symptomfinal2 = gsap.timeline({
+    scrollTrigger:{
+      trigger:".symp_trigger6",
+      start:"top center",
+    //  end:"bottom center",
+      //  toggleActions:"restart none none reverse",
+     //pin:true,
+      scrub: true,
+      
+ //markers:true,
+onEnter:()=>{},
+onLeave:()=>{},
+onEnterBack:()=>{},
+onLeaveBack:()=>{}
+    } 
+  });
+  symptomfinal2.to(".symptoms_virus_all2",{y:"-200vh",ease:"none"});
+
  
   let TV_cont = document.querySelector('#tvlottie_cont');
 let TVData = {
