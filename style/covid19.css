@@ -29,7 +29,7 @@ body{
     height: 8vw;
     bottom: 20%;
     left: 63%;
-    opacity: 0.8;
+    opacity: 1;
     display: none;
 }
 .first_bg{
@@ -228,7 +228,7 @@ width: 100vw;
 }
 .lib_moveY{
     
-    height: 1000px;
+    height: 1300px;
     width: 1px;
     }
     
@@ -353,9 +353,9 @@ left:  0;
    background-position:center;
 }
 .know_text{
-    width: 45%;
+    width: 42%;
     position: absolute;
-    right: 10%;
+    right: 15%;
     top:50%;
     transform:translate(0%,-50%);
 }
@@ -505,7 +505,7 @@ z-index: 8;
 
 }
 .market_text1{
-    width: 50vw;
+    width: 44vw;
  position: absolute;
  left: 50%;
  top:20vh;
@@ -604,7 +604,7 @@ transform:translate(-50%,0%);
     position: absolute;
     width: 40vw;
   right: 0vw;
-   top:6vh
+   top:20vh
     
 }
 .wall_left{
@@ -826,11 +826,18 @@ z-index: 0;
 }
 .animal_text2{
     position: absolute;
-    width: 40vw;
+    width: 32.14vw;
     bottom: 5vh;
     left: 50vw;
     transform:translate(-50%,0%);
     opacity: 0;
+}
+.prompt_sym{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(12, 39, 90, 0.788);
+    position: fixed;
+    z-index: 20;
 }
 .symptom_text{
     position: absolute;

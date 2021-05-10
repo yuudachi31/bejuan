@@ -56,9 +56,10 @@ let mouse_lottie_data = {
   loop: true,
   prerender: true,
   autoplay: true,
-   path: 'json/MOUSE.json'
-  // path: 'json/puzzle_prompt.json'
-  // path: 'json/scrolll.json'
+    // path: 'json/MOUSE.json',
+  //  path: 'json/puzzle_2.json',
+  // path: 'json/puzzle_prompt.json',
+  path: 'json/hover3.json',
   //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
 };
 let mouse_Anim = bodymovin.loadAnimation(mouse_lottie_data);
@@ -1554,6 +1555,9 @@ rotateZ:{
 //   //    }
 //   //  }
 //   }); 
+let sym_prompt=function(){
+ document.documentElement.style.overflowY = 'hidden';
+}
 let nsym_c3_play=function(){
   nsym_c3_anime.restart();
   $(".sym_btn_all").fadeIn(1000)
@@ -1569,6 +1573,7 @@ let nsym_scrollAnime= gsap.timeline({
       $(".sym_btn_all").fadeOut()
     },
     onEnter:()=>{
+      sym_prompt();
       $('.sym_cir_all').show();
     },
    //pin:true,
