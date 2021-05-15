@@ -59,7 +59,7 @@ let mouse_lottie_data = {
     // path: 'json/MOUSE.json',
   //  path: 'json/puzzle_2.json',
   // path: 'json/puzzle_prompt.json',
-  path: 'json/hover3.json',
+  path: 'json/scroll_3.json',
   //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
 };
 let mouse_Anim = bodymovin.loadAnimation(mouse_lottie_data);
@@ -1555,12 +1555,18 @@ rotateZ:{
 //   //    }
 //   //  }
 //   }); 
+let sym_btn_show_bool=0;
 let sym_prompt=function(){
  document.documentElement.style.overflowY = 'hidden';
 }
 let nsym_c3_play=function(){
   nsym_c3_anime.restart();
-  $(".sym_btn_all").fadeIn(1000)
+  if(sym_btn_show_bool==1){
+  $(".sym_btn_all").fadeIn(1000,function(){
+    $(".prompt_sym").fadeIn(500)
+  })
+ 
+  }
 } 
 let nsym_scrollAnime= gsap.timeline({
   onComplete:nsym_c3_play,
@@ -1571,8 +1577,11 @@ let nsym_scrollAnime= gsap.timeline({
     onLeaveBack:()=>{nsym_c3_anime.pause();
       $('.sym_cir_all').fadeOut();
       $(".sym_btn_all").fadeOut()
+      sym_btn_show_bool=0
     },
     onEnter:()=>{
+      sym_btn_show_bool=1
+     
       sym_prompt();
       $('.sym_cir_all').show();
     },
@@ -1592,8 +1601,10 @@ nsym_scrollAnime.from(".Nsym_c4",{scaleX:0, scaleY:0,duration:1.3,},"-=1.0");
 nsym_scrollAnime.to(".Nsym_c1",{opacity:1,duration:0.7,},"+=0.5");
 
 
-
-
+$(".ok_btn").click(function(){
+  document.documentElement.style.overflowY = 'scroll';
+  $(".prompt_sym").fadeOut(500)
+})
   let prev_move = gsap.timeline({
   
     scrollTrigger:{
@@ -2013,6 +2024,20 @@ nsym_scrollAnime.to(".Nsym_c1",{opacity:1,duration:0.7,},"+=0.5");
 
 // 以下  症狀_改--------------------------------
 
+let prompt_sym_anime_cont = document.querySelector('.prompt_sym_anime_cont');
+let prompt_sym_lottie_data = {
+  container: prompt_sym_anime_cont,
+  animType: 'svg',
+  loop: true,
+  prerender: true,
+  autoplay: true,
+    // path: 'json/MOUSE.json',
+  //  path: 'json/puzzle_2.json',
+  // path: 'json/puzzle_prompt.json',
+  path: 'json/scroll_3.json',
+  //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
+};
+let prompt_sym_anim = bodymovin.loadAnimation(prompt_sym_lottie_data);
 
 
 
