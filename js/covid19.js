@@ -1,5 +1,14 @@
 $('.shade').hide();
-
+let scrollOrNot = true
+function scrollToggle(){
+  scrollOrNot=false;
+  document.documentElement.style.overflowY = 'scroll';
+  
+}
+window.addEventListener("scroll", function(e){
+  scrollOrNot = true;
+  $(".prompt_sym").hide()
+});
 async function Loadtop(){
  let loadTop= await getScrollTop();
  if(loadTop<1){
@@ -8,6 +17,7 @@ async function Loadtop(){
 }else{
   $('#welcome').hide();
   document.documentElement.style.overflowY = 'scroll'; 
+
 //   document.documentElement.style.overflowX = 'hidden'; 
 let v_ani1=gsap.timeline() 
 
@@ -35,6 +45,7 @@ $(window).ready(function() {
      $('#welcome').css("visibility","visible") 
    }else{
      $('#welcome').hide();
+     $('.sidebars').show();
      document.documentElement.style.overflowY = 'scroll'; 
    //   document.documentElement.style.overflowX = 'hidden'; 
    let v_ani2=gsap.timeline() 
@@ -982,7 +993,7 @@ onLeaveBack:()=>{}
      //pin:true,
       scrub: 1.5,
       id:"symout",
-//  markers:true,
+  //markers:true,
 onEnter:()=>{},
 onLeave:()=>{$('.sym_text_contents').show();
 // $('.symout').fadeIn(500);
@@ -995,7 +1006,7 @@ onLeaveBack:()=>{}
     
   });
 
-  symptom_y.to(".symptoms_virus_all",{y:"-440vh",ease:"none"});
+  symptom_y.to(".symptoms_virus_all",{y:"-0vh",ease:"none"});
   
 
   let symptomfinal = gsap.timeline({
@@ -1521,6 +1532,7 @@ rotateZ:{
   //    }
   //  }
   }); 
+  
   let nsym_c3_anime = anime({
     targets: '.Nsym_c3',
     // opacity:[{value: 0.5, duration: 200},{value: 1, duration: 200}],
@@ -1557,7 +1569,11 @@ rotateZ:{
 //   }); 
 let sym_btn_show_bool=0;
 let sym_prompt=function(){
+  if( scrollOrNot==true){
  document.documentElement.style.overflowY = 'hidden';
+ console.log(scrollOrNot)
+ 
+  }
 }
 let nsym_c3_play=function(){
   nsym_c3_anime.restart();
