@@ -79,11 +79,11 @@ let mouse_lottie_data = {
   loop: true,
   prerender: true,
   autoplay: true,
-    // path: 'json/MOUSE.json',
+    
   //  path: 'json/puzzle_2.json',
   // path: 'json/puzzle_prompt.json',
-  //path: 'json/scroll_3.json',
-  path: 'json/hover77.json',
+  path: 'json/scroll_3.json',
+  //path: 'json/hover77.json',
   //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
 };
 let mouse_Anim = bodymovin.loadAnimation(mouse_lottie_data);
