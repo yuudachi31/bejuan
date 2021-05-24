@@ -1,6 +1,6 @@
 body{
     background-color: #000;
-    height: 55000px;
+    height: 45600px;
   width: 100vw;
   overflow: hidden;
 }
@@ -832,7 +832,7 @@ z-index: 0;
     transform:translate(-50%,0%);
     opacity: 0;
 }
-.prompt_sym{
+.prompt_all{
     width: 100vw;
     height: 100vh;
     background-color: rgba(12, 39, 90, 0.688);
@@ -910,7 +910,7 @@ z-index: 0;
 }
 .puzzle_tri_cont{
     width: 600;
-    height: 8100px;
+    height: 5000px;
     display: flex;
     flex-direction:row;
     background-color: rgb(59, 211, 117);
@@ -918,15 +918,23 @@ z-index: 0;
 .puzzle_trigger1{
     top:450px;
     /* height:120vh; */
-    height: 1800px;
+    height: 1500px;
     background-color: rgb(66, 139, 44);
     width: 100px;
     position: relative;
 }
 .puzzle_trigger2{
-    top:4000px;
+    top:2800px;
     /* height:120vh; */
-    height: 1800px;
+    height: 1500px;
+    background-color: rgb(66, 139, 44);
+    width: 100px;
+    position: relative;
+}
+.puzzle_trigger3{
+    top:2800px;
+    /* height:120vh; */
+    height: 2100px;
     background-color: rgb(66, 139, 44);
     width: 100px;
     position: relative;
@@ -971,14 +979,7 @@ z-index: 0;
     width: 100px;
     position: relative;
 }
-.puzzle_trigger3{
-    top:6000px;
-    /* height:120vh; */
-    height: 2100px;
-    background-color: rgb(66, 139, 44);
-    width: 100px;
-    position: relative;
-}
+
 .fast6_id{
     top:7900px;
     /* height:120vh; */
@@ -1634,7 +1635,7 @@ width: 60vw;
     left:0;
   
 }
-.prompt_sym_cont{
+.prompt_all_cont{
     background-color: #0d112b;
     position: absolute;
     height: 300px;
@@ -1648,7 +1649,7 @@ flex-direction: column;
 align-items: center;
 justify-content: space-around;
 }
-.prompt_sym_text{
+.prompt_text{
 height: 10%;
 }
 .ok_btn{
@@ -1657,7 +1658,7 @@ height: 10%;
     
 }
 
-.prompt_sym_anime_cont{
+.prompt_all_anime_cont{
    
     height: 50%;
     width: 50%;

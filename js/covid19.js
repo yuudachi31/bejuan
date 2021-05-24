@@ -1,14 +1,22 @@
 $('.shade').hide();
 let scrollOrNot = true
+let scrollLock = true
 function scrollToggle(){
   scrollOrNot=false;
   document.documentElement.style.overflowY = 'scroll';
-  
+  scrollLock=false
 }
-window.addEventListener("scroll", function(e){
+$(window).mousewheel(function(){
+  console.log("scrollOrNot ="+scrollOrNot )
+  console.log("scrollLock ="+scrollLock )
+  if(scrollLock==false){
   scrollOrNot = true;
   $(".prompt_sym").hide()
-});
+  console.log("aaaas")
+  }
+})
+
+
 async function Loadtop(){
  let loadTop= await getScrollTop();
  if(loadTop<1){
@@ -1572,7 +1580,7 @@ let sym_prompt=function(){
   if( scrollOrNot==true){
  document.documentElement.style.overflowY = 'hidden';
  console.log(scrollOrNot)
- 
+ scrollLock=true
   }
 }
 let nsym_c3_play=function(){
@@ -1619,7 +1627,8 @@ nsym_scrollAnime.to(".Nsym_c1",{opacity:1,duration:0.7,},"+=0.5");
 
 $(".ok_btn").click(function(){
   document.documentElement.style.overflowY = 'scroll';
-  $(".prompt_sym").fadeOut(500)
+  $(".prompt_sym").fadeOut(500);
+  scrollLock=!scrollLock
 })
   let prev_move = gsap.timeline({
   
@@ -2040,7 +2049,7 @@ $(".ok_btn").click(function(){
 
 // 以下  症狀_改--------------------------------
 
-let prompt_sym_anime_cont = document.querySelector('.prompt_sym_anime_cont');
+let prompt_sym_anime_cont = document.querySelector('#prompt_sym_anime_cont');
 let prompt_sym_lottie_data = {
   container: prompt_sym_anime_cont,
   animType: 'svg',
