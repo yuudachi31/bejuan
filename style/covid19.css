@@ -939,6 +939,14 @@ z-index: 0;
     width: 100px;
     position: relative;
 }
+.puzzle_trigger4{
+    top:2000px;
+    /* height:120vh; */
+    height: 600px;
+    background-color: rgb(66, 139, 44);
+    width: 100px;
+    position: relative;
+}
 .fast5_id{
     top:-800px;
     /* height:120vh; */
@@ -981,7 +989,7 @@ z-index: 0;
 }
 
 .fast6_id{
-    top:7900px;
+    top:4700px;
     /* height:120vh; */
     height: 100px;
     background-color: rgb(66, 139, 44);
@@ -998,6 +1006,14 @@ z-index: 0;
 }
 .prev_trigger1{
     top:600px;
+    /* height:120vh; */
+    height: 800px;
+    background-color: rgb(71, 216, 148);
+    width: 100px;
+    position: relative;
+}
+.prev_trigger1-2{
+    top:800px;
     /* height:120vh; */
     height: 800px;
     background-color: rgb(71, 216, 148);

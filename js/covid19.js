@@ -5,6 +5,7 @@ function scrollToggle(){
   scrollOrNot=false;
   document.documentElement.style.overflowY = 'scroll';
   scrollLock=false
+   $(".prompt_puzzle").hide()
 }
 $(window).mousewheel(function(){
   console.log("scrollOrNot ="+scrollOrNot )
@@ -12,6 +13,8 @@ $(window).mousewheel(function(){
   if(scrollLock==false){
   scrollOrNot = true;
   $(".prompt_sym").hide()
+  $(".prompt_puzzle").hide()
+  $(".prompt_prev").hide()
   console.log("aaaas")
   }
 })
@@ -39,6 +42,7 @@ v_ani1.to(".mouselottie",{opacity:1,duration:0},"2")
 }
 
 $(window).ready(function() {
+  $(".prompt_puzzle").hide()
   $(".man_fever").hide();
   $(".sym_t").css("visibility","hidden");
   // $('.sym_t').hide();
@@ -78,7 +82,8 @@ let mouse_lottie_data = {
     // path: 'json/MOUSE.json',
   //  path: 'json/puzzle_2.json',
   // path: 'json/puzzle_prompt.json',
-  path: 'json/scroll_3.json',
+  //path: 'json/scroll_3.json',
+  path: 'json/hover77.json',
   //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
 };
 let mouse_Anim = bodymovin.loadAnimation(mouse_lottie_data);
@@ -1624,10 +1629,52 @@ nsym_scrollAnime.from(".Nsym_c3",{scaleX:0, scaleY:0,duration:1.3,ease:"easeInOu
 nsym_scrollAnime.from(".Nsym_c4",{scaleX:0, scaleY:0,duration:1.3,},"-=1.0");
 nsym_scrollAnime.to(".Nsym_c1",{opacity:1,duration:0.7,},"+=0.5");
 
+let puzzle_prompt=function(){
+  if( scrollOrNot==true){
+ document.documentElement.style.overflowY = 'hidden';
+ console.log(scrollOrNot)
+ scrollLock=true
+ $(".prompt_puzzle").fadeIn(500)
+  }
+}
+
+let puzzle_show_prompt= gsap.timeline({
+  // onComplete:nsym_c3_play,
+  scrollTrigger:{
+    trigger:".puzzle_trigger4",
+    start:"top center",
+    end:"bottom center",
+    onLeaveBack:()=>{
+      $(".prompt_puzzle").hide()
+      // nsym_c3_anime.pause();
+      // $('.sym_cir_all').fadeOut();
+      // $(".sym_btn_all").fadeOut()
+      // sym_btn_show_bool=0
+    },
+    onEnter:()=>{
+      puzzle_prompt();
+      // sym_btn_show_bool=1
+     
+      // sym_prompt();
+      // $('.sym_cir_all').show();
+    },
+   //pin:true,
+  //  scrub:true,
+ //markers:true,
+onLeave:()=>{
+
+},
+// toggleActions:"restart none none reverse "
+toggleActions:"restart none none none "
+} 
+});
+
 
 $(".ok_btn").click(function(){
   document.documentElement.style.overflowY = 'scroll';
   $(".prompt_sym").fadeOut(500);
+  $(".prompt_puzzle").fadeOut(500)
+  $(".prompt_prev").fadeOut(500)
   scrollLock=!scrollLock
 })
   let prev_move = gsap.timeline({
@@ -1638,7 +1685,8 @@ $(".ok_btn").click(function(){
       end:"bottom center",
      //pin:true,
       //scrub:true,
- // markers:true,
+  markers:true,
+  
   onLeave:()=>{
   
   },
@@ -1647,6 +1695,35 @@ $(".ok_btn").click(function(){
   });
   prev_move.to(".prevA_cont",{x:"100vw"});
   prev_move.to(".prevB_cont",{x:"-100vw"},"-=0.3");
+
+  let showPrompt_prev=function(){
+    if( scrollOrNot==true){
+      document.documentElement.style.overflowY = 'hidden';
+      $(".prompt_prev").fadeIn(500)
+      console.log(scrollOrNot)
+      scrollLock=true
+       }
+    
+
+  }
+
+  let prompt_prevTrigger = gsap.timeline({
+    scrollTrigger:{
+      trigger:".prev_trigger1-2",
+      start:"top center",
+      end:"bottom center",
+     //pin:true,
+      //scrub:true,
+  markers:true,
+  onEnter:()=>{
+    showPrompt_prev()
+  },
+  onLeave:()=>{
+  
+  },
+  toggleActions:"restart none none reverse "
+    } 
+  });
 
   let prev_move2= gsap.timeline({
     scrollTrigger:{
@@ -2059,7 +2136,7 @@ let prompt_sym_lottie_data = {
     // path: 'json/MOUSE.json',
   //  path: 'json/puzzle_2.json',
   // path: 'json/puzzle_prompt.json',
-  path: 'json/scroll_3.json',
+  path: 'json/hover_sym1.json',
   //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
 };
 let prompt_sym_anim = bodymovin.loadAnimation(prompt_sym_lottie_data);
@@ -2067,3 +2144,32 @@ let prompt_sym_anim = bodymovin.loadAnimation(prompt_sym_lottie_data);
 
 
 // 以上  症狀_改--------------------------------
+let prompt_puzzle_anime_cont = document.querySelector('#prompt_puzzle_anime_cont');
+let prompt_puzzle_lottie_data = {
+  container: prompt_puzzle_anime_cont,
+  animType: 'svg',
+  loop: true,
+  prerender: true,
+  autoplay: true,
+    // path: 'json/MOUSE.json',
+  //  path: 'json/puzzle_2.json',
+  // path: 'json/puzzle_prompt.json',
+  path: 'json/puzzle_2.json',
+  //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
+};
+let prompt_puzzle_anim = bodymovin.loadAnimation(prompt_puzzle_lottie_data);
+
+let prompt_prev_anime_cont = document.querySelector('#prompt_prev_anime_cont');
+let prompt_prev_lottie_data = {
+  container: prompt_prev_anime_cont,
+  animType: 'svg',
+  loop: true,
+  prerender: true,
+  autoplay: true,
+    // path: 'json/MOUSE.json',
+  //  path: 'json/puzzle_2.json',
+  // path: 'json/puzzle_prompt.json',
+  path: 'json/hover_prev1.json',
+  //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
+};
+let prompt_prev_anim = bodymovin.loadAnimation(prompt_prev_lottie_data);
