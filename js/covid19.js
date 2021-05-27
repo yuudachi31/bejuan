@@ -6,6 +6,7 @@ function scrollToggle(){
   document.documentElement.style.overflowY = 'scroll';
   scrollLock=false
    $(".prompt_puzzle").hide()
+   $(".prompt_prev").hide()
 }
 $(window).mousewheel(function(){
   console.log("scrollOrNot ="+scrollOrNot )
@@ -1685,7 +1686,7 @@ $(".ok_btn").click(function(){
       end:"bottom center",
      //pin:true,
       //scrub:true,
-  markers:true,
+ // markers:true,
   
   onLeave:()=>{
   
@@ -1714,7 +1715,7 @@ $(".ok_btn").click(function(){
       end:"bottom center",
      //pin:true,
       //scrub:true,
-  markers:true,
+//  markers:true,
   onEnter:()=>{
     showPrompt_prev()
   },
@@ -2016,6 +2017,13 @@ $(".ok_btn").click(function(){
     $(".cc6").css({"height":"1.5vh","width":"1.4vh"})
     ,$(".fast_t6").css("width","0vh")
   })
+  $(".cc7").hover(function(){
+    $(".cc7").css({"height":"2.8vh","width":"2.8vh"})
+    ,$(".fast_t7").css("width","14vh")
+  } ,function(){
+    $(".cc7").css({"height":"1.5vh","width":"1.4vh"})
+    ,$(".fast_t7").css("width","0vh")
+  })
    let change_color1= gsap.timeline({
     scrollTrigger:{
       trigger:".fast1_id",
@@ -2033,7 +2041,7 @@ $(".ok_btn").click(function(){
   change_color1.to(".cc4",{backgroundColor:"white"},"<")
   change_color1.to(".cc5",{backgroundColor:"white"},"<")
   change_color1.to(".cc6",{backgroundColor:"white"},"<")
-
+  change_color1.to(".cc7",{backgroundColor:"white"},"<")
   let change_color2= gsap.timeline({
     scrollTrigger:{
       trigger:".fast2_id",
@@ -2051,7 +2059,7 @@ $(".ok_btn").click(function(){
   change_color2.to(".cc4",{backgroundColor:"white"},"<")
   change_color2.to(".cc5",{backgroundColor:"white"},"<")
   change_color2.to(".cc6",{backgroundColor:"white"},"<")
-
+  change_color2.to(".cc7",{backgroundColor:"white"},"<")
   let change_color3= gsap.timeline({
     scrollTrigger:{
       trigger:".fast3_id",
@@ -2069,7 +2077,7 @@ $(".ok_btn").click(function(){
   change_color3.to(".cc4",{backgroundColor:"white"},"<")
   change_color3.to(".cc5",{backgroundColor:"white"},"<")
   change_color3.to(".cc6",{backgroundColor:"white"},"<")
-  
+  change_color3.to(".cc7",{backgroundColor:"white"},"<")
   let change_color4= gsap.timeline({
     scrollTrigger:{
       trigger:".fast4_id",
@@ -2087,7 +2095,7 @@ $(".ok_btn").click(function(){
   change_color4.to(".cc3",{backgroundColor:"white"},"<")
   change_color4.to(".cc5",{backgroundColor:"white"},"<")
   change_color4.to(".cc6",{backgroundColor:"white"},"<")
-
+  change_color4.to(".cc7",{backgroundColor:"white"},"<")
   let change_color5= gsap.timeline({
     scrollTrigger:{
       trigger:".fast5_id",
@@ -2105,7 +2113,7 @@ $(".ok_btn").click(function(){
   change_color5.to(".cc3",{backgroundColor:"white"},"<")
   change_color5.to(".cc4",{backgroundColor:"white"},"<")
   change_color5.to(".cc6",{backgroundColor:"white"},"<")
-
+  change_color5.to(".cc7",{backgroundColor:"white"},"<")
   let change_color6= gsap.timeline({
     scrollTrigger:{
       trigger:".fast6_id",
@@ -2123,7 +2131,25 @@ $(".ok_btn").click(function(){
   change_color6.to(".cc3",{backgroundColor:"white"},"<")
   change_color6.to(".cc4",{backgroundColor:"white"},"<")
   change_color6.to(".cc5",{backgroundColor:"white"},"<")
-
+  change_color6.to(".cc7",{backgroundColor:"white"},"<")
+  let change_color7= gsap.timeline({
+    scrollTrigger:{
+      trigger:".fast7_id",
+      start:"top center",
+      end:"bottom center",
+        toggleActions:"restart none none reverse",
+     //pin:true,
+      scrub: true,
+ 
+    } 
+  });
+  change_color7.to(".cc1",{backgroundColor:"white"})
+  change_color7.to(".cc7",{backgroundColor:"#EDEA48"},"<")
+  change_color7.to(".cc2",{backgroundColor:"white"},"<")
+  change_color7.to(".cc3",{backgroundColor:"white"},"<")
+  change_color7.to(".cc4",{backgroundColor:"white"},"<")
+  change_color7.to(".cc5",{backgroundColor:"white"},"<")
+  change_color7.to(".cc6",{backgroundColor:"white"},"<")
 // 以下  症狀_改--------------------------------
 
 let prompt_sym_anime_cont = document.querySelector('#prompt_sym_anime_cont');
@@ -2136,7 +2162,7 @@ let prompt_sym_lottie_data = {
     // path: 'json/MOUSE.json',
   //  path: 'json/puzzle_2.json',
   // path: 'json/puzzle_prompt.json',
-  path: 'json/hover_sym1.json',
+  path: 'json/prompt_sym2.json',
   //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
 };
 let prompt_sym_anim = bodymovin.loadAnimation(prompt_sym_lottie_data);
@@ -2154,7 +2180,7 @@ let prompt_puzzle_lottie_data = {
     // path: 'json/MOUSE.json',
   //  path: 'json/puzzle_2.json',
   // path: 'json/puzzle_prompt.json',
-  path: 'json/puzzle_2.json',
+  path: 'json/prompt_puzzle.json',
   //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
 };
 let prompt_puzzle_anim = bodymovin.loadAnimation(prompt_puzzle_lottie_data);
@@ -2169,7 +2195,7 @@ let prompt_prev_lottie_data = {
     // path: 'json/MOUSE.json',
   //  path: 'json/puzzle_2.json',
   // path: 'json/puzzle_prompt.json',
-  path: 'json/hover_prev1.json',
+  path: 'json/prompt_prev2.json',
   //path: 'https://assets.lottiefiles.com/datafiles/jORpumH9Yn0XoXQ/data.json'
 };
 let prompt_prev_anim = bodymovin.loadAnimation(prompt_prev_lottie_data);

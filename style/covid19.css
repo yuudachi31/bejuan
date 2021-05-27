@@ -947,8 +947,16 @@ z-index: 0;
     width: 100px;
     position: relative;
 }
+.fast7_id{
+    top:2500px;
+    /* height:120vh; */
+    height: 100px;
+    background-color: rgb(66, 139, 44);
+    width: 100px;
+    position: relative;
+}
 .fast5_id{
-    top:-800px;
+    top:0px;
     /* height:120vh; */
     height: 100px;
     background-color: rgb(66, 139, 44);
@@ -1678,8 +1686,18 @@ height: 10%;
    
     height: 50%;
     width: 50%;
+    overflow: hidden;
 }
-
+.prompt_sym_anime_cont{
+    height: 200%;
+    width: 200%;
+    transform: translate(-25%,-25%);
+}
+.prompt_puzzle_anime_cont{
+    height: 125%;
+    width: 125%;
+    transform: translate(-12.5%,-12.5%);
+}
 .puzzle{
     position: fixed;
     width: 100vw;
