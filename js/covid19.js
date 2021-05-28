@@ -1,6 +1,6 @@
 $('.shade').hide();
 let scrollOrNot = true
-let scrollLock = true
+let scrollLock = false
 function scrollToggle(){
   scrollOrNot=false;
   document.documentElement.style.overflowY = 'scroll';
@@ -11,6 +11,7 @@ function scrollToggle(){
 $(window).mousewheel(function(){
   console.log("scrollOrNot ="+scrollOrNot )
   console.log("scrollLock ="+scrollLock )
+ 
   if(scrollLock==false){
   scrollOrNot = true;
   $(".prompt_sym").hide()
@@ -1676,7 +1677,7 @@ $(".ok_btn").click(function(){
   $(".prompt_sym").fadeOut(500);
   $(".prompt_puzzle").fadeOut(500)
   $(".prompt_prev").fadeOut(500)
-  scrollLock=!scrollLock
+  scrollLock=false
 })
   let prev_move = gsap.timeline({
   
