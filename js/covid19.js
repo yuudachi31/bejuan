@@ -186,7 +186,7 @@ let mouse_Anim = bodymovin.loadAnimation(mouse_lottie_data);
             scrub:true,
     
           } ,
-          y:　lib_h
+          y:　"102vw"
       
         });
 
