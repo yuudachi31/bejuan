@@ -1946,7 +1946,7 @@ $(".ok_btn").click(function(){
     } 
   });
 
-  final_lib.to(".prev_bg",{y:"-190vh"})
+  final_lib.to(".f_lib",{y:"-100vw"})
   
   let show_f_doctor= gsap.timeline({
     scrollTrigger:{
