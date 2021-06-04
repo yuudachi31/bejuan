@@ -1823,16 +1823,32 @@ height: 10%;
     position: absolute;
   
     /* background-color: yellow; */
-    top:50%;
-    left:50%;
+    top:78%;
+    left:59%;
     transform: translate(-50%,-50%);
 }
 .p2_f_c{
     height:15vw;
     width:15vw;
     position: absolute;
-    top:50%;
-    left:50%;
+    top:70.3%;
+    left:34.8%;
+    transform: translate(-50%,-50%);
+}
+.p3_f_c{
+    height:15vw;
+    width:15vw;
+    position: absolute;
+    top:32.5%;
+    left:65%;
+    transform: translate(-50%,-50%);
+}
+.p4_f_c{
+    height:15vw;
+    width:15vw;
+    position: absolute;
+    top:32.4%;
+    left:27.3%;
     transform: translate(-50%,-50%);
 }
 
@@ -1863,6 +1879,18 @@ height: 10%;
 }
 .p4_ff{
     opacity: 1;
+}
+.p1_on{
+    opacity: 0;
+}
+.p2_on{
+    opacity: 0;
+}
+.p3_on{
+    opacity: 0;
+}
+.p4_on{
+    opacity: 0;
 }
 .p2_f{
    
@@ -1950,8 +1978,9 @@ height: 10%;
     height:15vw;
     width:15vw;
     position: absolute;
-    top:13%;
-    left:6%;
+    top:-1%;
+    left:2%;
+  
     /* background-color: rgb(35, 216, 35); */
 }
 .p2_ept_c{
@@ -1959,8 +1988,9 @@ height: 10%;
     height:15vw;
     width:15vw;
     position: absolute;
-    top:9.35%;
-    left:44%;
+    top:-1%;
+    left:52%;
+   
     /* background-color: rgb(35, 216, 35); */
 }
 .p3_ept_c{
@@ -1968,8 +1998,9 @@ height: 10%;
     height:15vw;
     width:15vw;
     position: absolute;
-    top:40.3%;
-    left:9.38%;
+    top:49%;
+    left:2%;
+   
     /* background-color: rgb(35, 216, 35); */
 }
 .p4_ept_c{
@@ -1977,8 +2008,9 @@ height: 10%;
     height:15vw;
     width:15vw;
     position: absolute;
-    top:40.3%;
-    left:40.7%;
+    top:49%;
+    left:52%;
+  
     /* background-color: rgb(35, 216, 35); */
 }
 .p_t_c{

@@ -1143,6 +1143,7 @@ let p1ok=false
 let p2ok=false
 let p3ok=false
 let p4ok=false
+let puzzle_num=0;
 let p1f = document.querySelector('#p1_f');
 let p2f = document.querySelector('#p2_f');
 let p3f = document.querySelector('#p3_f');
@@ -1152,6 +1153,8 @@ p2f.addEventListener('dragstart',dragStart);
 p3f.addEventListener('dragstart',dragStart);
 p4f.addEventListener('dragstart',dragStart);
 function dragStart(e){
+ 
+
   e.dataTransfer.setData('text/plain',e.target.id)
 }
 
@@ -1163,17 +1166,23 @@ p1e_c.addEventListener('drop',dropped1);
 p2e_c.addEventListener('drop',dropped2);
 p3e_c.addEventListener('drop',dropped3);
 p4e_c.addEventListener('drop',dropped4);
-p1e_c.addEventListener('dragenter',cancelDefault,);
-p1e_c.addEventListener('dragover',cancelDefault);
-p2e_c.addEventListener('dragenter',cancelDefault);
-p2e_c.addEventListener('dragover',cancelDefault);
-p3e_c.addEventListener('dragenter',cancelDefault);
-p3e_c.addEventListener('dragover',cancelDefault);
-p4e_c.addEventListener('dragenter',cancelDefault);
-p4e_c.addEventListener('dragover',cancelDefault);
+// p1e_c.addEventListener('dragenter',dropEnter1,);
+p1e_c.addEventListener('dragleave',dropLeave1,);
+p1e_c.addEventListener('dragover',dropEnter1);
+// p2e_c.addEventListener('dragenter',dropEnter2);
+p2e_c.addEventListener('dragleave',dropLeave2,);
+p2e_c.addEventListener('dragover',dropEnter2);
+// p3e_c.addEventListener('dragenter',dropEnter3);
+p3e_c.addEventListener('dragleave',dropLeave3,);
+p3e_c.addEventListener('dragover',dropEnter3);
+// p4e_c.addEventListener('dragenter',dropEnter4);
+p4e_c.addEventListener('dragleave',dropLeave4,);
+p4e_c.addEventListener('dragover',dropEnter4);
+
 function dropped1(e){
   cancelDefault(e)
   let id = e.dataTransfer.getData('text/plain');
+  console.log(id)
   if(id==="p1_f"){
   e.target.appendChild(document.querySelector(`#${id}`))
   $('.p1_ff').fadeOut(2000);
@@ -1183,6 +1192,62 @@ function dropped1(e){
   puzzleRotate()
   }
 }
+
+
+function dropEnter1(e){
+  //dragEnter can't get e.dataTransfer.getData('text/plain');
+  cancelDefault(e)
+
+  // id = e.dataTransfer.getData('text/plain');
+  // console.log(id)
+  if(puzzle_num===1){
+  $(".p1_on").css("opacity","0.4")
+    console.log(111222)
+ }
+}
+function dropLeave1(e){
+  $(".p1_on").css("opacity","0")
+}
+
+function dropEnter2(e){
+  //dragEnter can't get e.dataTransfer.getData('text/plain');
+  cancelDefault(e)
+
+  // id = e.dataTransfer.getData('text/plain');
+  // console.log(id)
+  if(puzzle_num===2){
+  $(".p2_on").css("opacity","0.4")
+   
+ }
+}
+function dropLeave2(e){
+  $(".p2_on").css("opacity","0")
+}
+function dropEnter3(e){
+
+  cancelDefault(e)
+
+  if(puzzle_num===3){
+  $(".p3_on").css("opacity","0.4")
+   
+ }
+}
+function dropLeave3(e){
+  $(".p3_on").css("opacity","0")
+}
+function dropEnter4(e){
+
+  cancelDefault(e)
+
+  if(puzzle_num===4){
+  $(".p4_on").css("opacity","0.4")
+   
+ }
+}
+function dropLeave4(e){
+  $(".p4_on").css("opacity","0")
+}
+
 function dropped2(e){
   cancelDefault(e)
   let id = e.dataTransfer.getData('text/plain');
@@ -1237,12 +1302,14 @@ $(".p1_ept").hover(function(){
 });
 $("#p1_f").hover(function(){
   if(p1ok===false){
+    puzzle_num=1
   $(".puzzle_light_1").css("opacity","1")
   $(".p1_shade").css("opacity","1")
   $(".p1_text").css("opacity","1")
 }
 
 },function(){
+  
   $(".puzzle_light_1").css("opacity","0")
   $(".p1_shade").css("opacity","0")
   $(".p1_text").css("opacity","0")
@@ -1251,6 +1318,7 @@ $("#p1_f").hover(function(){
 
 $("#p2_f").hover(function(){
   if(p2ok===false){
+    puzzle_num=2
   $(".puzzle_light_2").css("opacity","1")
   $(".p2_shade").css("opacity","1")
   $(".p2_text").css("opacity","1")
@@ -1263,6 +1331,7 @@ $("#p2_f").hover(function(){
 
 $("#p3_f").hover(function(){
   if(p3ok===false){
+    puzzle_num=3
   $(".puzzle_light_3").css("opacity","1")
   $(".p3_shade").css("opacity","1")
   $(".p3_text").css("opacity","1")
@@ -1275,6 +1344,7 @@ $("#p3_f").hover(function(){
 
 $("#p4_f").hover(function(){
   if(p4ok===false){
+    puzzle_num=4
   $(".puzzle_light_4").css("opacity","1")
   $(".p4_shade").css("opacity","1")
   $(".p4_text").css("opacity","1")
