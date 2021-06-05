@@ -1,5 +1,7 @@
 $(function() {
-  document.cookie = 'cookie3=0';
+  document.cookie = 'Step=1';
+  document.cookie = 'rightNum=0';
+  document.cookie = 'wrongNum=0';
   console.log(document.cookie);
   window.setTimeout(( () => doorflash.play() ), 4000);
   
