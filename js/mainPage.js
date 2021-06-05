@@ -1,4 +1,6 @@
 $(function() {
+  document.cookie = 'cookie3=0';
+  console.log(document.cookie);
   window.setTimeout(( () => doorflash.play() ), 4000);
   
     $('.ivy_light').hide()

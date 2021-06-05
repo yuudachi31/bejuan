@@ -6,7 +6,10 @@ $(function() {
     $('.david_light').hide()
     $('.screen_light').hide()
 
-
+    console.log(document.cookie);
+    document.cookie = 'cookie3=value3';
+    document.cookie = 'cookie3=val3';
+    console.log(document.cookie);
 $('.ivy').hover(
     function(){
         $('.ivy_light').show()
