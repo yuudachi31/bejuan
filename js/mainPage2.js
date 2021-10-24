@@ -512,7 +512,7 @@ $('.first_btn').click(
   function () {
     $('.step1').hide();
     $('.step2').show();
-
+    step=2;
     document.cookie = 'Step=2';
   }
 )
@@ -575,14 +575,17 @@ $('.w').click(
 )
 $('.as').click(
   function () {
+    console.log("you cool2")
     $(this).css("background-color", "rgba(20, 255, 137, 0.815)")
     $('.block').show();
     setTimeout((() => {
+      console.log("you cool")
       $(this).css("background-color", "")
       $(".as").css("background-color", "")
       if (step == 2) {
         $('.step2').hide();
         $('.step3').show();
+        
         document.cookie = 'Step=3';
         step += 1;
         right_num += 1;
